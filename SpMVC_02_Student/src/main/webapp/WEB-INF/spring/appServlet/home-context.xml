@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context-4.3.xsd">
+		<!-- 하나의 bean에 하나의 class만 쓸 때는 id가 필요하진 않지만
+		호환성을 위해 써주는 것이 좋다. id는 하나만 있어야한다 -->
+	<bean id="homeService" class="com.biz.student.service.HomeService">
+		<!-- field 변수와 연결된 setter가 있을 때 사용할 수 있다 -->
+		<property name="st_home" value="이몽룡이네집" />
+		<property name="st_addr" value="서울특별시" />
+	</bean>
+
+</beans>

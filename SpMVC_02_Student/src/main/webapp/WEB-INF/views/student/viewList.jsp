@@ -1,0 +1,44 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<!-- < %@는 jsp파일을 확장시키는 세팅값이나 외부 설정값을 가져온다 -->
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h2>학생 리스트</h2>
+
+<!-- jstl core taglib를 사용한 tag 코드를 시작. prefix가 c로 되어 있으므로 c: -->
+<!-- forEach는 자바의 확장for문과 같은 역할
+controller에서 model에 담겨서 넘어온 리스트를 items로 설정 -->
+<c:forEach items="${stdList}" var="dto">
+<p>${dto.st_num} : 
+${dto.st_name} : 
+${dto.st_dept} : 
+${dto.st_grade} : 
+${dto.st_tel} : 
+</c:forEach>
+
+<p>${stdList[0].st_num} : 
+${stdList[0].st_name} : 
+${stdList[0].st_dept} : 
+${stdList[0].st_grade} : 
+${stdList[0].st_tel} :
+
+<p>${stdList[1].st_num} : 
+${stdList[1].st_name} : 
+${stdList[1].st_dept} : 
+${stdList[1].st_grade} : 
+${stdList[1].st_tel} :
+
+<p>${stdList[2].st_num} : 
+${stdList[2].st_name} : 
+${stdList[2].st_dept} : 
+${stdList[2].st_grade} : 
+${stdList[2].st_tel} :   
+</body>
+</html>

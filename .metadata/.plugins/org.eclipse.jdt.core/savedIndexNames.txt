@@ -1,9 +1,3 @@
 INDEX VERSION 1.131+C:\BizWork\springwork\.metadata\.plugins\org.eclipse.jdt.core
-4217149881.index
-3772580088.index
-989273769.index
-3852173419.index
-2310669416.index
-1781145890.index
-1770876311.index
-3195396060.index
+58335852.index
+1703014217.index

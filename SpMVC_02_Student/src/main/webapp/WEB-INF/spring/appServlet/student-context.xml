@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+	<!-- spring framework 3.x 이하부터 사용하던 클래스 선언, 생성코드
+	StudentService stService = new StudentService()랑 유사하다. spring container에
+	싱글톤으로 하나를 올려두며 어디서나 불러서 쓸 수 있다 -->
+	<bean id="stService" class="com.biz.student.service.StudentService">
+	<!-- 생성자가 있을 때 constructor-arg를 사용할 수 있다 -->
+		<constructor-arg type="String" value="홍길동" index="0" />
+		<constructor-arg type="String" value="컴퓨터공학" index="1" />
+	</bean>
+
+</beans>
