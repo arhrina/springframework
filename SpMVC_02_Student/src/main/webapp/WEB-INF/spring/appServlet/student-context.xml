@@ -9,9 +9,11 @@
 	StudentService stService = new StudentService()랑 유사하다. spring container에
 	싱글톤으로 하나를 올려두며 어디서나 불러서 쓸 수 있다 -->
 	<bean id="stService" class="com.biz.student.service.StudentService">
-	<!-- 생성자가 있을 때 constructor-arg를 사용할 수 있다 -->
+		<!-- 생성자가 있을 때 constructor-arg를 사용할 수 있다 -->
+		<!-- 
 		<constructor-arg type="String" value="홍길동" index="0" />
 		<constructor-arg type="String" value="컴퓨터공학" index="1" />
+		 -->
 	</bean>
 
 </beans>

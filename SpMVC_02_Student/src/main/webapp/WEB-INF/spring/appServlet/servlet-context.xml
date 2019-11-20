@@ -21,7 +21,7 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<!-- 이 package에서 annotation이 설정된 클래스를 자동으로 scan하여 bean으로 등록 -->
 	<context:component-scan base-package="com.biz.student.controller" />
 	<context:component-scan base-package="com.biz.student.service" />
+	
 </beans:beans>
