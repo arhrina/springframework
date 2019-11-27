@@ -5,18 +5,18 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import lombok.ToString;
 
-@Setter
 @Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@ToString
 public class DeptDTO {
-	private String d_code;//	varchar2(5 byte)
-	private String d_name;//	nvarchar2(50 char)
-	private String d_ceo;//	nvarchar2(50 char)
-	private String d_tel;//	varchar2(20 byte)
-	private String d_addr;//	nvarchar2(125 char)
+
+	private String d_code;	//varchar2(5 byte)
+	private String d_name;	//nvarchar2(50 char)
+	private String d_ceo;	//nvarchar2(50 char)
+	private String d_tel;	//varchar2(20 byte)
+	private String d_addr;	//nvarchar2(125 char)
+	
 }

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+ <mapper namespace="com.biz.iolist.persistence.ProductDao">
+ 
+ 	<select id="selectAll" resultType="pDTO">
+ 	</select>
+ 	<select id="findAll" resultType="pDTO">
+ 	</select>
+ 	 	
+ 	<select id="getDCode" resultType="String">
+ 	</select> 	
+ 	
+ 	<select id="findByDCode" resultType="pDTO">
+ 	</select>
+ 	 	
+ 	<select id="findById"></select>
+ 	
+ 	<insert id="insert" parameterType="pDTO">
+ 	</insert>
+	
+ 	<update id="update" parameterType="pDTO">
+ 	</update>
+ 	<delete id="delete">
+ 	</delete>
+ 
+ </mapper> 

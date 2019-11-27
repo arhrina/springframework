@@ -123,6 +123,7 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\BizWork\springwork\SpMVC_04_Iolist_02"/>
 			<item value="C:\BizWork\springwork\SpMVC_03_Student_03"/>
 			<item value="C:\BizWork\springwork\SpMVC_01_Student_02"/>
 			<item value="C:\BizWork\springwork\JSP_03_Servlet"/>
@@ -137,5 +138,7 @@
 		<item key="DIALOG_WIDTH" value="500"/>
 		<item key="DIALOG_HEIGHT" value="418"/>
 		<item key="TOGGLE_SELECTED" value="false"/>
+	</section>
+	<section name="NewWizardAction">
 	</section>
 </section>

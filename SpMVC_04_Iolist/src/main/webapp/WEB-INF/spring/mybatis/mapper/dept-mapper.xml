@@ -5,14 +5,14 @@
   
  <mapper namespace="com.biz.iolist.persistence.DeptDao">
  
- 	<select id="selectAll" resultType="dDTO">
- 	SELECT * FROM tbl_dept
- 	ORDER BY d_name, d_ceo
+ 	<select id="selectAll" resultType="DeptDTO">
+ 		SELECT * FROM tbl_dept ORDER BY d_name, d_ceo
  	</select>
- 	<select id="findAll" resultType="dDTO">
- 	SELECT * FROM tbl_dept
- 	ORDER BY d_code
+ 	<select id="findAll" resultType="DeptDTO">
+ 		SELECT * FROM tbl_dept ORDER BY d_code
  	</select>
+ 	 	
+ 	<select id="findById"></select>
  	<insert id="insert"></insert>
  	<update id="update"></update>
  	<delete id="delete"></delete>

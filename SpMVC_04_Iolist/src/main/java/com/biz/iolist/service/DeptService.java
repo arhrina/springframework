@@ -11,13 +11,14 @@ import com.biz.iolist.persistence.DeptDao;
 
 @Service
 public class DeptService {
-	
+
 	@Autowired
 	SqlSession sqlSession;
 	
-	public List<DeptDTO> getAllList(){
-		DeptDao dDao = sqlSession.getMapper(DeptDao.class);
-		List<DeptDTO> dList = dDao.findAll();
-		return dList;
+	public List<DeptDTO> getAllList() {
+		DeptDao deptDao = sqlSession.getMapper(DeptDao.class);
+		List<DeptDTO> deptList = deptDao.selectAll();
+		return deptList;
 	}
+	
 }
