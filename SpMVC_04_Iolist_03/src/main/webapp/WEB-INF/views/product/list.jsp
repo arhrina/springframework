@@ -24,13 +24,13 @@ $(function(){
 	$(".content-body").click(function(e){
 		
 		// id에 설정된 값을 가져오기
-		let p_code = $(this).attr("id")
+		let id = $(this).attr("id")
 		
-		// alert(p_code)
-		// 현재 페이지를 /product/view를 전환하라
-		// 주소창에 /product/view를 입력하여 서버에 전송하라
-		// p_code 변수에 값을 실어서 보내라
-		document.location.href = "${rootPath}/product/view?p_code=" + p_code
+		// alert(d_code)
+		// 현재 페이지를 /dept/view를 전환하라
+		// 주소창에 /dept/view를 입력하여 서버에 전송하라
+		// d_code 변수에 값을 실어서 보내라
+		document.location.href = "${rootPath}/product/view?id=" + id
 			
 	})
 })
@@ -48,17 +48,17 @@ $(function(){
 			<tr>
 				<th>NO</th>
 				<th>상품코드</th>
-				<th>상품명</th>
-				<th>매입가격</th>
-				<th>판매가격</th>
-				<th>부가가치세</th>
+				<th>상품이름</th>
+				<th>매입단가</th>
+				<th>매출단가</th>
+				<th>부가세</th>
 			</tr>
 			<c:choose>
-				<c:when test="${empty PRODUCTLIST}">
+				<c:when test="${empty PROLIST}">
 					<tr><td colspan="5">데이터가 없음</td></tr>
 				</c:when>
 				<c:otherwise>
-					<c:forEach items="${PRODUCTLIST}" var="dto" 
+					<c:forEach items="${PROLIST}" var="dto" 
 							varStatus="info">
 						<tr class="content-body" id="${dto.p_code}">
 							<td>${info.count}</td>

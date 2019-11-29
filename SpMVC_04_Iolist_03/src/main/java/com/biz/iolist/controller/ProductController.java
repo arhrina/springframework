@@ -7,7 +7,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
 
 import com.biz.iolist.domain.ProductDTO;
 import com.biz.iolist.service.ProductService;
@@ -19,51 +18,54 @@ public class ProductController {
 	@Autowired
 	ProductService pService;
 	
-	@RequestMapping(value="/list", method=RequestMethod.GET)
-	public ModelAndView list(Model model) {
-		ModelAndView mView = new ModelAndView();
-		List<ProductDTO> pList = pService.getAllList();
-		mView.setViewName("/product/list");
-		mView.addObject("PRODUCTLIST", pList);
-		return mView;
-	}
-	
-	@RequestMapping(value = "/view", method = RequestMethod.GET)
-	public String view(String p_code, Model model) {
-		ProductDTO pDTO = pService.findByPCode(p_code);
-		model.addAttribute("PRO_DTO", pDTO);
+	@RequestMapping(value="/list",method=RequestMethod.GET)
+	public String list(Model model) {
+		
+		List<ProductDTO> proList = pService.getAllList();
+		model.addAttribute("PROLIST",proList);
 		return null;
 	}
-	
+
 	@RequestMapping(value="/insert",method=RequestMethod.GET)
-	public String input(Model model) {
+	public String insert(Model model) {
 		return "product/input";
 	}
-	
-	@RequestMapping(value="/insert", method=RequestMethod.POST)
-	public String input(ProductDTO pDTO, Model model) {
-		int ret = pService.insert(pDTO);
+
+	@RequestMapping(value="/insert",method=RequestMethod.POST)
+	public String insert(ProductDTO pDTO, Model model) {
 		return "redirect:/product/list";
 	}
 	
-	@RequestMapping(value="/delete",method=RequestMethod.GET)
-	public String delete(String id, Model model) {
-		int let = pService.delete(id);
-		return "redirect:/dept/list";
+	@RequestMapping(value="/view",method=RequestMethod.GET)
+	public String view(String id,Model model) {
+		
+		ProductDTO pDTO = pService.getProInfo(id);
+		model.addAttribute("PRO_DTO",pDTO);
+		return null;
 	}
-	
+
 	@RequestMapping(value="/update",method=RequestMethod.GET)
-	public String update(String id, Model model) {
-		ProductDTO pDTO = pService.findByPCode(id);
-		model.addAttribute("PI",pDTO);
+	public String update(String id,Model model) {
+		
+		ProductDTO pDTO = pService.getProInfo(id);
+		model.addAttribute("PRO",pDTO);
 		return "product/input";
 	}
 
 	@RequestMapping(value="/update",method=RequestMethod.POST)
-	public String update(ProductDTO pDTO) {
-		int ret = pService.update(pDTO);
-		return "redirect:/product/view?p_code=" + pDTO.getP_code();
-	
+	public String update(ProductDTO proDTO, Model model) {
+		
+		int ret = pService.update(proDTO);
+		
+		return "redirect:/product/list";
 	}
+
+	@RequestMapping(value="/delete",method=RequestMethod.GET)
+	public String delete(String id,Model model) {
+		
+		int ret = pService.delete(id);
+		return "redirect:/product/list";
+	}
+
 	
 }
