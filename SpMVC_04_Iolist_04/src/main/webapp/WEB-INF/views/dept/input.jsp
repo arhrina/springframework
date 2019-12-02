@@ -8,7 +8,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>□□□ 나의 JSP 페이지 □□□</title>
 <%@ include file="/WEB-INF/views/include/include-css.jspf" %>
-
 <style>
 	.in-box {
 		display: inline-block;

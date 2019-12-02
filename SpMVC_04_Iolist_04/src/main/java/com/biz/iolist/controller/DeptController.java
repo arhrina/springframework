@@ -23,14 +23,17 @@ public class DeptController {
 	// @Inject
 	@Autowired
 	DeptService dService;
-	
-	@RequestMapping(value="/search", method=RequestMethod.GET)
-	public String search(String strText, Model model) {
-		List<DeptDTO> deptList = dService.selectNameSearch(strText);
-		model.addAttribute("DEPTLIST", deptList);
-		return "dept/list-body";
-	}
 
+	@RequestMapping(value="/search",method=RequestMethod.GET)
+	public String search(String strText,Model model) {
+		List<DeptDTO> deptList 
+			= dService.selectNameSearch(strText);
+		
+		model.addAttribute("DEPTLIST",deptList);
+		return "dept/list-body";
+		
+	}
+	
 	/*
 	 *  class의 /dept와 method /list를 묶어서
 	 *  /dept/list path로 request 했을때.

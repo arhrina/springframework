@@ -95,9 +95,13 @@ public class IolistController {
 		// List를 보여서 변경된사항을 보여줘라
 		return "redirect:/iolist/list";
 	}
+	
 	/*
-	 * tbl_iolist seq는 숫자형인데 seq로 조회하기 위한 쿼리값인 id는 문자열로 받는다
-	 * 혹, id가 전송되지 않아서 발생할 수 있는 400 에러를 방지하기 위함
+	 * tbl_iolist seq 칼럼은 숫자형인데
+	 * 일단 seq 칼럼으로 조회를 하기위한 쿼리값인 id는
+	 * 문자열로 받는다.
+	 * 혹시 id값이 전송되지 않아서 발생할수 있는
+	 * 400 오류를 방지하기 위함이다.
 	 */
 	@RequestMapping(value="/view",method = RequestMethod.GET)
 	public String view(String id, Model model) {
@@ -109,11 +113,10 @@ public class IolistController {
 			// TODO: handle exception
 		}
 		IolistVO io_dto = ioService.findBySeq(io_seq);
-		model.addAttribute("IO_DTO", io_dto);
+		model.addAttribute("IO_DTO",io_dto);
 		return "iolist/view";
+		
 	}
-	
-
 	
 }
 

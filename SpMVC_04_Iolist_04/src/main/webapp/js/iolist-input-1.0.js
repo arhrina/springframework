@@ -1,36 +1,37 @@
 $(function(){
-	
-	var calc = function(){
+
+	var calc = function() {
 		let price = parseInt($("#io_price").val())
 		let qty = parseInt($("#io_qty").val())
 		let total = price * qty
 		$("#io_total").val(total)
 	}
 	
+	
 	$("#btn-save").click(function(){
-		// dcode에 대한 유효성검사
 		let dCode = $("#io_dcode").val()
-		if(dCode == ""){
-			alert("거래처코드는 반드시 입력해야함")
+		if(dCode == "") {
+			alert("거래처코드는 반드시 입력해야 합니다!!!")
 			$("#io_dcode").focus()
 			return false
 		}
-		// pcode에 대한 유효성검사		
+		
 		let pCode = $("#io_pcode").val()
-		if(pCode == ""){
-			alert("상품코드는 반드시 입력해야함")
+		if(pCode == "") {
+			alert("상품코드는 반드시 입력해야 합니다!!!")
 			$("#io_pcode").focus()
 			return false
 		}
 		
-		if(confirm("저장할까요?")){
-			$("form").submit() // form을 서버로 전송하란 명령
+		if(confirm("저장할까요?")) {
+			$("form").submit()
 		}
 	})
 	
 	$("#io_price").on("change keyup paste input propertychange", calc)
 	$("#io_qty").on("change keyup paste input propertychange", calc)
-	// 입력박스에서 enter키 입력을 감지하기 위함
+
+		// 입력박스에서 enter키 입력을 감지하기 위함
 	$("#io_dcode").keypress(function(e){
 		if(e.keyCode == 13) {
 
@@ -43,10 +44,10 @@ $(function(){
 			
 			let status = "toolbar=no,"
 			status += "scrollbars=yes,"
-			status += "resizable=no,"
+			status += "resizable=yes,"
 			status += "top=200,"
-			status += "left=200,"
-			status += "width=400,"
+			status += "left=500,"
+			status += "width=600,"
 			status += "height=400"
 			
 			// _blank가 있으므로
@@ -55,6 +56,15 @@ $(function(){
 			window.open(query,"_blank",status)
 		}
 	})
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	/* 
 	 * 입력box에 키보드로 뭔가를 입력할때마다 발생하는 이벤트
 	 * 키보드 이벤트
@@ -76,7 +86,7 @@ $(function(){
 			let str = $(this).val()
 			
 			let query = rootPath
-			query += "/product/search?strText=" + str
+			query += "/product/search?strText="+str
 			
 			let status = "toolbar=no,"
 			status += "scrollbars=yes,"

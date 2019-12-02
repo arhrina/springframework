@@ -21,10 +21,11 @@
  	</select>
  	 	
  	<select id="findByDName" resultType="DeptDTO">
- 		SELECT * FROM tbl_dept WHERE d_name LIKE '%' || #{d_name} || '%'
+ 		SELECT * FROM tbl_dept 
+ 		WHERE d_name LIKE '%' || #{d_name} || '%'
  		ORDER BY d_name
- 	</select>
- 	
+ 	</select> 	
+ 	 	
  	<select id="findById"></select>
  	
  	<insert id="insert" parameterType="DeptDTO">

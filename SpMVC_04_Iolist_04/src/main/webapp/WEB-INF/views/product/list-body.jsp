@@ -38,11 +38,11 @@ $(function(){
 			$("#io_price",opener.document).val(strOPrice)
 		}
 		
-		// 수량 * 단가 계산해서 합계로 붙여넣기
+		// 수량 * 단가 = 합계 계산하여 붙여넣기
 		let price = $("#io_price",opener.document).val()
 		let qty = $("#io_qty",opener.document).val()
 		$("#io_total",opener.document).val(
-			parseInt(price) * parseInt(qty) // javascript에서 문자열을 정수로 바꾸는 함수
+			parseInt(price) * parseInt(qty)		
 		)
 		
 		window.close()
@@ -55,21 +55,20 @@ $(function(){
 
 </script>	
 <style>
-	div.s-box{
-		width: 95%;
+	div.s-box {
+		width:95%;
 		margin: 0 auto;
 	}
-	div.s-box input{
-		padding: 8px;
-		width: 100%;
+	
+	div.s-box input {
+		padding:8px;
+		width:100%;
 	}
 </style>
 <article>
 	<div class="s-box">
 		<form>
-			<input name="strText">
-			<!-- 변수명을 동일하게 해서 action은 이 창의 query가 그대로 들어간다
-			2개가 넘어갈 경우엔 버튼이 필요 -->
+			<input name="strText">		
 		</form>
 	</div>
 	<table>

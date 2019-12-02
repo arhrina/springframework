@@ -33,8 +33,8 @@
 		    LEFT JOIN tbl_product P
 		        ON IO.io_pcode = P.p_code
 		ORDER BY IO_SEQ DESC
-	</select>
-	
+	</select> 
+
 	<select id="findBySeq" resultType="IolistVO">
 		SELECT 
 		    IO_SEQ AS IO_SEQ,
@@ -60,6 +60,7 @@
 		        ON IO.io_pcode = P.p_code
 		WHERE io_seq = #{io_seq}
 		ORDER BY IO_SEQ DESC
+		
 	</select> 
 	
 	<insert id="insert" parameterType="IolistDTO">
