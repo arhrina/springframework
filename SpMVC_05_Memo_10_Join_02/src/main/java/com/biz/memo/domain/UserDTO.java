@@ -45,7 +45,7 @@ public class UserDTO {
 	 */
 	
 	@NotNull
-	@NotBlank(message = "공백이면 안되")
+	@NotBlank(message = "공백이면 안돼")
 	@Email(message = "* 이메일형식으로만 써!!!")
 	@Size(min = 5, max=100)
 	private String u_id;
@@ -55,7 +55,7 @@ public class UserDTO {
 		
 	private String u_name;
 	
-	@NotBlank(message = "* 닉네임은 비어있으면 안되!!!")
+	@NotBlank(message = "* 닉네임은 비어있으면 안!!!")
 	private String u_nick;
 	private String u_grade;
 	
