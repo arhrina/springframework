@@ -222,5 +222,16 @@ span#u_id_msg {
 		<button type="button" id="btn-save">저장</button>
 	</form:form>
 </fieldset>
+<<<<<<< HEAD
+=======
+	<%
+	/*
+	html tag의 inputbox 와 달리
+	name이라는 속성을 사용하지 않고 
+	path라는 속성이 변수설정 역할을 수행
+	*/
+	%>
+
+>>>>>>> 20c0e7a35cd5ddab13de9241ab59d489e75056de
 </body>
 </html>
