@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
-<aop-project name="SpMVC_07_DataGoKr"/>
+<aop-project name="SpMVC_08_DataGoKr_Pet"/>
 <aop-project name="Travel"/>
+<aop-project name="SpMVC_05_Memo_02"/>
 </aop-reference-model>
