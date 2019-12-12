@@ -16,7 +16,7 @@ import com.biz.student.service.StudentService;
  */
 
 @Controller
-public class StudentController { // 컨트롤러에서 쓰는 메소드는 모두 String형
+public class StudentController { // 컨트롤러에서 쓰는 메서드는 모두 String형
 	
 	@Autowired
 	StudentService sService;

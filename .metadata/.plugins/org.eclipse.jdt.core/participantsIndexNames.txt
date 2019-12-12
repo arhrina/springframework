@@ -39,10 +39,10 @@ C:\BizWork\springwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4200
 \SpMVC_04_Iolist_04\src\main\java
 C:\BizWork\springwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3417210127.index
 \SpMVC_05_Memo_10_Join_03\src\main\java
-C:\BizWork\springwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3375094728.index
-\SpMVC_05_Memo_10_Join\src\main\java
 C:\BizWork\springwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\730236618.index
 \SpMVC_08_DataGoKr_Pet\src\main\java
+C:\BizWork\springwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3375094728.index
+\SpMVC_05_Memo_10_Join\src\main\java
 C:\BizWork\springwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\700638541.index
 \SpMVC_02_Student\src\main\java
 C:\BizWork\springwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2013786105.index
@@ -107,6 +107,8 @@ C:\BizWork\springwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\7141
 \SpMVC_05_Memo\src\main\java
 C:\BizWork\springwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2441054478.index
 \SpMVC_04_Iolist_03\src\main\java
+C:\BizWork\springwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\190743128.index
+\SpMVC_09_Product\src\main\java
 C:\BizWork\springwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3152781083.index
 \SpMVC_06_Naver\src\main\java
 C:\BizWork\springwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\95037942.index
