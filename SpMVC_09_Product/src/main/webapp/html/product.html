@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<title>Page Title</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<style>
+p {
+	border: 1px solid red;
+	margin: 10px;
+	padding: 16px;
+}
+</style>
+<script>
+/*
+ ajax의 기본문법 $.ajax()
+ 속성 : $.ajax(속성)
+ 속성은 json(java script object notation) 형태
+ 여러 값들을 세팅
+ 
+ URL : 서버에 요청할 request address
+ data : request를 수행시 server에 보낼 data(들)
+ success : server에서 정상적인 response가 되면 실행되는 함수
+ error : server에서 비정상값을 보내거나 400, 500 등의 error message가 출력되는 경우 실행될 함수
+ type : server에 request할 method. default는 type='GET'
+ ex) type:'GET', type:'POST'
+ */
+        $(function(){
+            $("#b-name").click(function(){
+                let p_code = $("#p_code").val()
+                $.ajax(
+                    {
+                        url : '/product/pname',
+                        data : {'p_code' : p_code},
+                        success : function(result){
+                            $("#s-name").text(result)
+                        },
+                        error: function(err){
+                        	alert("ERROR" + err)
+                        }
+                    }
+                )
+        })
+        $("#b-oprice").click(function(){
+                let p_code = $("#p_code").val()
+                $.ajax(
+                    {
+                        url : '/product/oprice',
+                        data : {'p_code' : p_code},
+                        success : function(result){
+                            $("#s-oprice").text(result)
+                        },
+                        error: function(err){
+                        	alert("ERROR" + err)
+                        }
+                    }
+                )
+        })
+        
+         $("#b-iprice").click(function(){
+                let p_code = $("#p_code").val()
+                $.ajax(
+                    {
+                        url : '/product/iprice',
+                        data : {'p_code' : p_code},
+                        success : function(result){
+                            $("#s-iprice").text(result)
+                        },
+                        error: function(err){
+                        	alert("ERROR" + err)
+                        }
+                    }
+                )
+        })
+    })
+    </script>
+</head>
+<body>
+	<p>
+		<label>상품코드</label>
+		<!--id가 DTO 이름이랑 같아야 자동렌더링-->
+		<input id="p_code" name="p_code">
+	</p>
+	<p>
+		<span id="s-name"></span>
+		<button class="b-search" id="b-name">상품명</button>
+	</p>
+	<p>
+		<span id="s-oprice"></span>
+		<button class="b-search" id="b-oprice">판매가격</button>
+	</p>
+	<p>
+		<span id="s-iprice"></span>
+		<button class="b-search" id="b-iprice">매입가격</button>
+	</p>
+</body>
+</html>
