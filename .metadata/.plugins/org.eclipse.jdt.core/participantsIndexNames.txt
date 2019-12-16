@@ -19,6 +19,8 @@ C:\BizWork\springwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4075
 \JSP_02_Hello\src
 C:\BizWork\springwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2023788352.index
 \SpMVC_04_Iolist_03\src\main\java
+C:\BizWork\springwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\967200413.index
+\SpMVC10_DataGoKrBok\src\main\java
 C:\BizWork\springwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1041622507.index
 \SpMVC_02_Student\src\main\java
 C:\BizWork\springwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\473124478.index
@@ -133,6 +135,8 @@ C:\BizWork\springwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2815
 \Travel\src\main\java
 C:\BizWork\springwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1905920684.index
 \SpMVC_04_Iolist_04\src\main\java
+C:\BizWork\springwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4208947068.index
+\SpMVC_10_DataGokrBok\src\main\java
 C:\BizWork\springwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\337729837.index
 \SpMVC_03_Student_03\src\main\java
 C:\BizWork\springwork\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3694341699.index
