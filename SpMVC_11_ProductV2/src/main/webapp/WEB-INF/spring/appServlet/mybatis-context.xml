@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	<!-- 1 dataSource 생성 -->
+	<bean id="ds" class="org.apache.commons.dbcp2.BasicDataSource">
+		<property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
+		<property name="url"  value="jdbc:oracle:thin:@127.0.0.1:1521:xe"/>
+		<property name="username"  value="iouser"/>
+		<property name="password"  value="iouser"/>
+	</bean>
+	
+	<!-- sqlSession을 관리할 관리자 생성 -->
+	<bean id="sqlSessionFactory" 
+			class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="ds"/>
+		<property 
+			name="mapperLocations" 
+			value="/WEB-INF/spring/mybatis/mapper/*-mapper.xml"/>
+		<!-- typeAliasesPackage, value로 설정된 패키지의 모든 DTO, VO class를 첫글자만 소문자로해서 자동으로 alias 등록함
+		(java에서의 객체명명패턴. ex, MyClass myClass = new MyClass();) -->
+		<property name="typeAliasesPackage" value="com.biz.product.domain" />
+		<!-- mybatis-config.xml에 있는 typeAlias를 쓰지 않기 위해 지정
+		따로 지정을 할 수 없으며 value의 ProductDTO의 첫글자만 소문자로 바뀌어서 사용된다
+		하위 패키지는 모두 포함된다
+		
+		임의로 이름을 설정하고 싶으면 mybatis-config.xml에 설정해주어야 한다 -->
+		<property name="typeAliases" 
+				value="com.biz.product.domain.ProductDTO" />
+		<property name="configLocation" value="/WEB-INF/spring/mybatis/mybatis-config.xml"/>
+		<!-- 둘이 같이 사용해도 충돌은 나지 않는다 -->
+	</bean>
+	
+	<!-- mapper.xml과 Dao와 연동하여 DBMS 연산을 수행 -->
+	<bean class="org.mybatis.spring.SqlSessionTemplate">
+		<constructor-arg index="0" ref="sqlSessionFactory"/>
+	</bean>
+
+</beans>
