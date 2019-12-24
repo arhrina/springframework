@@ -123,6 +123,7 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\505-26\Desktop\team prj\Travel"/>
 			<item value="C:\BizWork\springwork"/>
 			<item value="C:\BizWork\springwork\SpMVC_10_DataGokrBok"/>
 			<item value="C:\BizWork\springwork\SpMVC_07_DataGoKr_02"/>
