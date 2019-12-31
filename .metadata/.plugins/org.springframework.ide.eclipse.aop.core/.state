@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
-<aop-project name="Travel"/>
-<aop-project name="SpMVC_05_Memo_10_Join_02"/>
+<aop-project name="SpMVC_12_ToDoList"/>
 </aop-reference-model>
