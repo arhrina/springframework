@@ -22,19 +22,22 @@
 	}
 	
 	table {
-		border:1px solid gray;
 		border-collapse: collapse;
 		width: 95%;
 		margin:0 auto;
+		border :1px solid gray;
+	}
+
+	table.input tr, table.input td, table.input th {
+		padding:10px;
+	}
+
+
+	table.list tr, table.list td, table.list th {
+		border :1px solid gray;
+		padding:5px;
 	}
 	
-	table.list tr, table.list td, table.list th{
-		border:1px solid gray;
-	}
-	
-	table.input tr, table.input td, table.input th{
-		padding: 10px;
-	}
 	
 </style>
 </head>
@@ -47,28 +50,27 @@
 		<form method="POST">
 			<table class="input">
 				<tr>
-					<th>작성일</th>
-					<td><input type="date" name="tdDate"></td>
-					<th>작성시각</th>
-					<td><input type="time" name="tdTime"></td>
-				</tr>
-				<tr>
-					<th>할일</th>
-					<td colspan="3">
 					<td>
 						<label for="tdFlag">중요도</label>
-						<input id="tdFlag" type="number" value="1" min="1" max="5">
+						<input id="tdFlag" type="number" value="1"
+									min="1" max="5" name="tdFlag">
 					</td>
+
 					<td>
 						<input type="text" name="tdSubject">
 					</td>
+
 					<td>
-						<input type="checkbox" id="tdAlarm" name="tdAlarm" value="Y">
-						<label for="tdAlarm">알람설정</label>
+						<input type="checkbox" 
+							id="tdAlaram" name="tdAlarm" 
+							value="Y">
+						<label for="tdAlaram">알람설정</label>
 					</td>
+					
 					<td>
 						<button>저장</button>
 					</td>
+				
 				</tr>
 			</table>
 		</form>
@@ -89,10 +91,19 @@
 					<td>${index.count}</td>
 					<td>${todo.tdFlag}</td>
 					<td>${todo.tdSubject}</td>
-					<td><a href="#{rootPath}/complete?tdSeq=${todo.tdSeq}&tdComplete=${todo.tdComplete}">${todo.tdComplete}</a></td>
-					<td><a href="#{rootPath}/alarm?tdSeq=${todo.tdSeq}&tdAlarm=${todo.tdAlarm}">${todo.tdAlarm}</a></td>
-					<td><a href="#{rootPath}/update?tdSeq=${todo.tdSeq}">수정</a>
-					<a href="#{rootPath}/delete?tdSeq=${todo.tdSeq}">삭제</a></td>
+					<td>
+						<a href="${rootPath}/complete?tdSeq=${todo.tdSeq}&tdComplete=${todo.tdComplete}">
+						${todo.tdComplete}
+						</a>
+					</td>
+					<td>
+					<a href="${rootPath}/alarm?tdSeq=${todo.tdSeq}&tdAlarm=${todo.tdAlarm}">
+					${todo.tdAlarm}
+					</td>
+					<td>
+					<a href="${rootPath}/update?tdSeq=${todo.tdSeq}">수정</a>
+					<a href="${rootPath}/delete?tdSeq=${todo.tdSeq}">삭제</a>
+					</td>
 				</tr>
 			</c:forEach>
 		</table>

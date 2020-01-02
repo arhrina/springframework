@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import com.biz.todo.domain.ToDoList;
 import com.biz.todo.repository.ToDoListDao;
 
-@Service("toDoServiceV1") // 서비스에 이름을 붙이기
+@Service("toServiceV1")
 public class ToDoServiceV1 implements ToDoService {
 
 	/*
@@ -27,7 +27,7 @@ public class ToDoServiceV1 implements ToDoService {
 	 * 직접 dao를 사용하여 method를 호출할수 있다. 
 	 */
 	@Autowired
-	protected ToDoListDao toDao; // 상속받아서 autowired를 쓰지 않게 하기 위해 생성자로 protected를 사용
+	protected ToDoListDao toDao;
 	
 	@Override
 	public List<ToDoList> selectAll() {
@@ -41,18 +41,18 @@ public class ToDoServiceV1 implements ToDoService {
 		SimpleDateFormat sd = new SimpleDateFormat("yyyy-MM-dd");
 		SimpleDateFormat st = new SimpleDateFormat("hh:mm:ss");
 		
-		String strCom = toDoList.getTdComplete();
-		if(strCom == null) {
-			toDoList.setTdComplete("N");
-		}
-		
-		String strAlarm = toDoList.getTdAlarm();
-		if(strAlarm == null) {
-			toDoList.setTdAlarm("N");
-		}
-		
 		String curDate = sd.format(date); // 문자열형 날짜 생성
 		String curTime = st.format(date); // 문자열형 시간 생성
+		
+		String strTdComp = toDoList.getTdComplete();
+		if(strTdComp == null || strTdComp.isEmpty()) {
+			toDoList.setTdComplete("N");
+		}
+
+		String strTdAlarm = toDoList.getTdAlarm();
+		if(strTdAlarm == null || strTdAlarm.isEmpty()) {
+			toDoList.setTdAlarm("N");
+		}
 		
 		toDoList.setTdDate(curDate);
 		toDoList.setTdTime(curTime);
@@ -84,16 +84,16 @@ public class ToDoServiceV1 implements ToDoService {
 		// TODO Auto-generated method stub
 		return 0;
 	}
-	
+
 	@Override
-	public int complete(String strSeq, String strComplete) {
+	public int complete(String strSeq,String tdComplete) {
+		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public int alarm(String strSeq, String strAlarm) {
-		// TODO Auto-generated method stub
-		
+	public int alarm(String strSeq, String tdAlarm) {
+		return 0;
 	}
 
 }

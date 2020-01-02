@@ -18,10 +18,8 @@ import com.biz.todo.service.ToDoService;
 public class ToDoController {
 
 	@Autowired
-	@Qualifier("toDoServiceV2") // factory Bean Qualifier
-	// ToDoService toService; // bean은 2개가 올 수 없다. 에러 발생
-	// ToDoService toDoServiceV2; // 상속을 받으면 Controller에서 모든 이름을 바꿔줘야하는 일이 발생
-	ToDoService toService; // 서비스에 이름을 붙이고 qualifier annotation으로 어떤 서비스인지 지정해줄 수 있다
+	@Qualifier("toServiceV2")
+	ToDoService toService;
 	
 	@RequestMapping(value="list", method=RequestMethod.GET)
 	public String list(Model model) {
@@ -49,18 +47,32 @@ public class ToDoController {
 		return "redirect:/list";
 	}
 	
-	@RequestMapping(value="complete", method=RequestMethod.GET)
-	public String complete(@RequestParam("tdSeq") String strSeq,
-			@RequestParam("tdComplete") String strComplete) {
-		toService.complete(strSeq, strComplete);
+	@RequestMapping(value="complete",method=RequestMethod.GET)
+	public String complete(
+			@RequestParam("tdSeq") String strSeq,
+			@RequestParam("tdComplete") String tdComplete) {
+		
+		toService.complete(strSeq,tdComplete);
 		return "redirect:/list";
 	}
+
+	@RequestMapping(value="alarm",method=RequestMethod.GET)
+	public String alam(
+			@RequestParam("tdSeq") String strSeq,
+			@RequestParam("tdAlarm") String tdAlarm) {
+		
+		toService.alarm(strSeq,tdAlarm);
+		return "redirect:/list";
+	}
+
 	
-	@RequestMapping(value="alarm", method=RequestMethod.GET)
-	public String alarm(@RequestParam("tdSeq") String strSeq,
-			@RequestParam("tdAlarm") String strAlarm) {
-		toService.alarm(strSeq, strAlarm);
-		return "redirect:/list";
-	}
 	
 }
+
+
+
+
+
+
+
+

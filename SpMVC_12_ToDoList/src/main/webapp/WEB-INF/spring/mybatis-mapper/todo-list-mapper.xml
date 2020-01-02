@@ -28,31 +28,19 @@
 			#{tdAlarm,jdbcType=VARCHAR}
 		)
  	</insert>
+ 	
  	<update id="complete">
- 		UPDATE tbl_todolist SET td_complete = DECODE(td_Complete, 'Y', 'N', 'Y')
- 		<!-- 
- 		<if test="#{tdComplete} == 'Y' ">
- 			'N'
- 		</if>
- 		<if test="#{tdComplete} == 'N' ">
- 			'Y'
- 		</if>
- 		 -->
- 		WHERE TD_SEQ = #{longSeq}
+ 		UPDATE tbl_todolist
+ 		SET td_complete = DECODE(td_complete,'Y','N','Y') 
+ 		WHERE td_seq = #{tdSeq}
  	</update>
  	
- 	 	<update id="alarm">
- 		UPDATE tbl_todolist SET td_alarm= DECODE(td_Alarm, 'Y', 'N', 'Y') -- #{tdAlarm}
- 		<!-- 
- 		<if test="#{tdComplete} == 'Y' ">
- 			'N'
- 		</if>
- 		<if test="#{tdComplete} == 'N' ">
- 			'Y'
- 		</if>
- 		 -->
- 		WHERE TD_SEQ = #{longSeq}
+ 	<update id="alarm">
+ 		UPDATE tbl_todolist
+ 		SET td_alarm= DECODE(td_alarm,'Y','N','Y') 
+ 		WHERE td_seq = #{tdSeq}
  	</update>
+ 	
  	<update id="update"></update>
  	<delete id="delete"></delete>
  
