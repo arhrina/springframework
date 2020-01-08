@@ -123,6 +123,7 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\bizwork\spring framework\SpMVC_13_ImgGalleryV3"/>
 			<item value="C:\bizwork\spring framework\SpMVC_13_ImgGallery2"/>
 			<item value="C:\bizwork\spring framework"/>
 			<item value="C:\bizwork\spring\SpMVC_12_ToDoListV2"/>
