@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd">
+	
+	<!-- AuthInterceptor class의 prehandle가 수행할 규칙을 지정 -->
+	<bean id="auth" class="com.biz.gallery.controller.interceptor.AuthInterceptor"/>
+	<!-- AuthInterceptor 클래스의 prehandler가 관리할 URI들은 mapping path로 지정
+	그럴 필요가 없는 URI들은 exclude-mapping으로 지정 -->
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/image/upload*"/> <!-- mapping은 interceptor를 갔다가 온다 -->
+			<mvc:mapping path="/rest/upload*"/>
+			<mvc:mapping path="/image/delete*"/>
+			<mvc:mapping path="/image/update**/**"/>
+			
+			<mvc:exclude-mapping path="/member*"/> <!-- exclude-mapping은 interceptor를 거치지 않고 바로 controller로 -->
+			<mvc:exclude-mapping path="/rest/login*"/>
+			<ref bean="auth"/> <!-- 설정값들을 bean id auth에 집어넣는다 -->
+		</mvc:interceptor>
+	</mvc:interceptors>
+
+</beans>

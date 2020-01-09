@@ -123,6 +123,7 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\bizwork\spring framework\SpMVC_13_ImgGalleryV4"/>
 			<item value="C:\bizwork\spring framework\SpMVC_13_ImgGalleryV3"/>
 			<item value="C:\bizwork\spring framework\SpMVC_13_ImgGallery2"/>
 			<item value="C:\bizwork\spring framework"/>
@@ -150,7 +151,7 @@
 		<item key="DIALOG_X_ORIGIN" value="710"/>
 		<item key="DIALOG_Y_ORIGIN" value="242"/>
 		<item key="DIALOG_WIDTH" value="500"/>
-		<item key="DIALOG_HEIGHT" value="418"/>
+		<item key="DIALOG_HEIGHT" value="419"/>
 		<item key="TOGGLE_SELECTED" value="false"/>
 	</section>
 	<section name="NewWizardAction">
