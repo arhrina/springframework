@@ -260,8 +260,11 @@ $(function(){
 						else
 							document.location.replace("${rootPath}/")
 					},
-					error : function() {
-						alert("서버 통신오류")
+					error : function(error) {
+						if(error.status == 403){
+							alert("삭제 권한이 없음")
+							return false
+						}
 					}
 				})
 				

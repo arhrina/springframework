@@ -9,14 +9,32 @@
 	
 	<!-- AuthInterceptor class의 prehandle가 수행할 규칙을 지정 -->
 	<bean id="auth" class="com.biz.gallery.controller.interceptor.AuthInterceptor"/>
+	<bean id="upload" class="com.biz.gallery.controller.interceptor.UploadInterceptor"/>
+	<bean id="ajax" class="com.biz.gallery.controller.interceptor.AjaxInterceptor"/>
 	<!-- AuthInterceptor 클래스의 prehandler가 관리할 URI들은 mapping path로 지정
 	그럴 필요가 없는 URI들은 exclude-mapping으로 지정 -->
 	<mvc:interceptors>
+	
 		<mvc:interceptor>
-			<mvc:mapping path="/image/upload*"/> <!-- mapping은 interceptor를 갔다가 온다 -->
-			<mvc:mapping path="/rest/upload*"/>
+			<mvc:mapping path="/image/upload"/>
+			<mvc:mapping path="/image/update/*"/> <!-- GET을 사용 -->
+			<ref bean="upload"/>
+		</mvc:interceptor>
+		
+		<mvc:interceptor>
+			<mvc:mapping path="/image/delete"/> <!-- POST를 사용 -->
+			<ref bean="ajax"/>
+		</mvc:interceptor>
+	 
+	 	<!-- 
+			<mvc:mapping path="/image/upload*"/> mapping은 interceptor를 갔다가 온다
+	 		<mvc:mapping path="/rest/upload*"/>
 			<mvc:mapping path="/image/delete*"/>
 			<mvc:mapping path="/image/update**/**"/>
+	  -->
+		<mvc:interceptor>
+
+			<mvc:mapping path="/image/delete"/>
 			
 			<mvc:exclude-mapping path="/member*"/> <!-- exclude-mapping은 interceptor를 거치지 않고 바로 controller로 -->
 			<mvc:exclude-mapping path="/rest/login*"/>
