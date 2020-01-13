@@ -56,10 +56,9 @@
 			</c:when>
 			<c:otherwise>
 				<c:forEach items="${bList}" var="book" varStatus="index">
-					<tr class="content-body" data-id="${book.b_code}"
-						data-auth="${book.b_author}">
+					<tr>
 						<td>${index.count}</td>
-						<td>${book.b_name}</td>
+						<td class="content-body" data-id="${book.b_code}">${book.b_name}</td>
 						<td>${book.b_author}</td>
 						<td>${book.b_comp}</td>
 						<td>${book.b_year}</td>

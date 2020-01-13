@@ -5,11 +5,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <title>Insert title here</title>
 </head>
 <script>
 $(function(){
-	$("#btn-insert").click(function(){
+	$(".btn-insert").click(function(){
 		let id = $(this).attr(data-bcode)
 		document.location.href = "${rootPath}/rbooks/insert?seq" + id
 	})
@@ -42,6 +43,6 @@ $(function(){
 			</c:forEach>
 		</c:otherwise>
 	</c:choose>
-	<button type="button" id="btn-insert">독서록 추가</button>
+	<button class="btn-insert">독서록 추가</button>
 </body>
 </html>
