@@ -28,6 +28,12 @@
 				document.location.href = "${rootPath}/books/delete?b_code=" + b_code
 			}
 		})
+		
+		$(".content-body").click(function(){
+				var b_code = $(this).attr("data-id")
+				document.location.href = "${rootPath}/rbooks/rblist?b_code=" + b_code
+			}
+		)
 	})
 	
 </script>

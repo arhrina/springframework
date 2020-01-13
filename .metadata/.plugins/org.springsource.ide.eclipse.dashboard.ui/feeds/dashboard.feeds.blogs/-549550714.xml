@@ -5,7 +5,66 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2020-01-10T06:55:00Z</updated>
+  <updated>2020-01-10T17:31:43Z</updated>
+  <entry>
+    <title>Spring Integration AWS 2.3.1 &amp; Spring Cloud Stream Kinesis Binder 2.0.1 Available</title>
+    <link rel="alternate" href="https://spring.io/blog/2020/01/10/spring-integration-aws-2-3-1-spring-cloud-stream-kinesis-binder-2-0-1-available" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Artem Bilan</name>
+    </author>
+    <id>tag:spring.io,2020-01-10:3926</id>
+    <updated>2020-01-10T17:31:43Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;Dear Spring Community,&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Today it&amp;#8217;s my pleasure to announce patch releases of Spring Integration for Amazon Web Services extension version &lt;code&gt;2.3.1&lt;/code&gt; and Spring Cloud Stream Binder for AWS Kinesis version &lt;code&gt;2.0.1&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;These releases can be downloaded from Maven Central, JCenter, and our &lt;a href="https://repo.spring.io/release"&gt;release repository&lt;/a&gt;:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-groovy" data-lang="groovy"&gt;compile "org.springframework.integration:spring-integration-aws:2.3.1.RELEASE"&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;If you don&amp;#8217;t use Kinesis Binder.
+Or via Binder dependency:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="listingblock"&gt;
+&lt;div class="content"&gt;
+&lt;pre class="prettyprint highlight"&gt;&lt;code class="language-groovy" data-lang="groovy"&gt;compile "org.springframework.cloud:spring-cloud-stream-binder-kinesis:2.0.1.RELEASE"&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Mostly these versions have bug fixes and some community feedback refinements.
+Plus they are upgraded to the latest dependencies. So, it is highly recommended to bump your projects to this latest versions.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Many thanks to everyone from the Community for all the feedback and contribution to these projects.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Any feedback is welcome via all the available communication channels!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;With recently announced &lt;a href="https://spring.io/blog/2019/12/23/spring-cloud-roadmap-and-hoxton-and-greenwich-maintenance-and-eol-announcements"&gt;Spring Cloud Ilford&lt;/a&gt;, we also are going to do some major changes in Spring Integration for AWS and Spring Cloud Stream Binder for AWS Kinesis to support AWS SDK v2. Everybody who&amp;#8217;s willing to help with this, you are welcome to contribute any possible way!&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Spring Integration for AWS resources:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;a href="https://github.com/spring-projects/spring-integration-aws"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-integration/blob/master/CONTRIBUTING.adoc"&gt;Contributing&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-integration"&gt;Help&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-integration"&gt;Chat&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Spring Cloud Stream Binder for AWS Kinesis resources:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-stream-binder-aws-kinesis"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-cloud/spring-cloud-stream-binder-aws-kinesis/blob/master/spring-cloud-stream-binder-kinesis-docs/src/main/asciidoc/contributing.adoc"&gt;Contributing&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-cloud-stream"&gt;Help&lt;/a&gt; | &lt;a href="https://gitter.im/spring-projects/spring-cloud-stream"&gt;Chat&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>A Bootiful Podcast: Pivotal Labs Sydney director David Julia</title>
     <link rel="alternate" href="https://spring.io/blog/2020/01/10/a-bootiful-podcast-pivotal-labs-sydney-director-david-julia" />
@@ -1033,50 +1092,6 @@ hello delayed parallel-1
   &lt;li&gt;Have you checked out this month&amp;rsquo;s &lt;a href="https://www.rabbitmq.com/blog/2019/12/07/this-month-in-rabbitmq-november-2019-recap/"&gt;&lt;em&gt;This Month in RabbitMQ&lt;/em&gt; roundup yet?&lt;/a&gt;&lt;br/&gt;conference-recording-recommendations-2019/)&lt;/li&gt;
   &lt;li&gt;I love Trisha Gee¡¯s tutorial series introducing &lt;a href="https://blog.jetbrains.com/idea/tag/tutorial-reactive-spring/"&gt; reactive Spring Boot.&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Cloud Data Flow 2.3.0 GA Released</title>
-    <link rel="alternate" href="https://spring.io/blog/2019/12/09/spring-cloud-data-flow-2-3-0-ga-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Janne Valkealahti</name>
-    </author>
-    <id>tag:spring.io,2019-12-06:3904</id>
-    <updated>2019-12-09T19:16:48Z</updated>
-    <content type="html">&lt;p&gt;The release 2.3.0 delivers a lot of enhancements and generic compatibility changes for Spring Boot 2.2.x and Spring Cloud Hoxton.&lt;/p&gt;&lt;h2&gt;&lt;a href="#continuous-deployment-for-tasks" class="anchor" name="continuous-deployment-for-tasks"&gt;&lt;/a&gt;Continuous Deployment For Tasks&lt;/h2&gt;
-&lt;p&gt;As task applications evolve faster to keep up with business needs, the ability for new versions to be consumed via Data Flow in an automated way is needed. While Data Flow has supported the ability to register multiple versions of a task application in previous iterations, the ability to run them in a practical way by re-hydrating command line arguments, deployment properties, and application properties used in previous executions has been missing. In this version, the storage of those values in a manifest and the ability to both retrieve them to determine if an application needs to be upgraded and apply them to the new execution allows for developers to create continuous deployment flows for their task applications. All these capabilities are readily available through RESTful APIs, as well, so the overall CI/CD workflow for Tasks can be automated.&lt;/p&gt;&lt;h2&gt;&lt;a href="#scheduler-improvements" class="anchor" name="scheduler-improvements"&gt;&lt;/a&gt;Scheduler improvements&lt;/h2&gt;
-&lt;p&gt;Scheduling has been updated to support the Task¡¯s CI/CD features. Thus when the Kubernetes or Cloud Foundry Task-scheduler launches the application after the user updates the Task application to a new version, the next execution in Spring Cloud Data Flow will take advantage of these updates automatically.&lt;/p&gt;&lt;h2&gt;&lt;a href="#monitoring-improvements" class="anchor" name="monitoring-improvements"&gt;&lt;/a&gt;Monitoring improvements&lt;/h2&gt;
-&lt;p&gt;In this release, we have revised the monitoring architecture to drive towards a consistent experience in Local, Kubernetes, and Cloud Foundry.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Using &lt;a href="https://github.com/micrometer-metrics/prometheus-rsocket-proxy"&gt;Prometheus RSocket Proxy&lt;/a&gt; as a default approach for Prometheus-based monitoring of the &lt;a href="https://github.com/micrometer-metrics/prometheus-rsocket-proxy#support-for-short-lived-or-serverless-applications"&gt;short lived&lt;/a&gt; Tasks, as well as long-lived streaming applications, and across all supported platforms.&lt;/li&gt;
-  &lt;li&gt;Native &lt;a href="https://dataflow.spring.io/docs/2.3.0.SNAPSHOT/feature-guides/batch/monitoring/"&gt;monitoring of Spring Cloud Tasks and Spring Cloud Batch&lt;/a&gt;, complements to the existing monitoring support for streaming applications through Spring Cloud Streams.&lt;/li&gt;
-  &lt;li&gt;We have a few &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow-samples/tree/master/monitoring-samples"&gt;monitoring-samples&lt;/a&gt;. You will find instructions for building custom Stream and Task applications integrated with the Data Flow Monitoring Architecture:&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow-samples/tree/master/monitoring-samples/stream-apps"&gt;stream-apps&lt;/a&gt; - how to enable monitoring for custom built source, processor and sink apps.&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow-samples/tree/master/monitoring-samples/task-apps"&gt;task-apps&lt;/a&gt; - how to enable monitoring for custom built task apps.&lt;/li&gt;
-  &lt;li&gt;Allow using the monitoring architecture to implement elastic, auto-scaling adapters for stream pipelines.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src="https://user-images.githubusercontent.com/50398/70357194-37365c00-186e-11ea-9bc2-5dfe4924d114.gif" alt="SCDF-monitoring-promethesu-proxy" /&gt;&lt;/p&gt;&lt;h2&gt;&lt;a href="#kubernetes-deployer-improvements" class="anchor" name="kubernetes-deployer-improvements"&gt;&lt;/a&gt;Kubernetes deployer improvements&lt;/h2&gt;
-&lt;p&gt;The following new capabilities are readily available as &lt;a href="https://docs.spring.io/spring-cloud-dataflow/docs/2.3.0.RELEASE/reference/htmlsingle/#configuration-kubernetes-deployer"&gt;deployment properties&lt;/a&gt; in Kubrentes for both streaming and batch data pipelines.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Support for Node Affinity, Pod Affinity and Anti-Affinity&lt;/li&gt;
-  &lt;li&gt;Ability to add multiple ports to Service objects&lt;/li&gt;
-  &lt;li&gt;Allow customization of the container image used in StatefulSet deployments&lt;/li&gt;
-  &lt;li&gt;Implementation of Scaling API&lt;/li&gt;
-  &lt;li&gt;Support for custom init containers&lt;/li&gt;
-&lt;/ul&gt;&lt;h2&gt;&lt;a href="#helm-chart-improvements" class="anchor" name="helm-chart-improvements"&gt;&lt;/a&gt;Helm chart improvements&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Ability to enable monitoring support using Prometheus and Grafana&lt;/li&gt;
-  &lt;li&gt;Try out the &lt;a href="https://hub.helm.sh/charts/stable/spring-cloud-data-flow"&gt;2.3 GA compatible version of the Helm Chart&lt;/a&gt; and let us know what you think!&lt;/li&gt;
-&lt;/ul&gt;&lt;h2&gt;&lt;a href="#scaling-api" class="anchor" name="scaling-api"&gt;&lt;/a&gt;Scaling API&lt;/h2&gt;
-&lt;p&gt;The addition of new scaling API is available to quickly alter the number of application instances without redeploying a whole stream with updates to the deployment properties. The Scaling API is agnostic to the target platform and can be used seamlessly with K8s, CF and Local.&lt;/p&gt;&lt;h2&gt;&lt;a href="#import-export-utility" class="anchor" name="import-export-utility"&gt;&lt;/a&gt;Import/Export Utility&lt;/h2&gt;
-&lt;p&gt;We also made it easier to work with multiple environments by adding &lt;a href="https://docs.spring.io/spring-cloud-dataflow/docs/2.3.0.RELEASE/reference/htmlsingle/#_import_export_streams"&gt;Import/Export Streams&lt;/a&gt; feature which provides easy moving streams across different environments, e.g. dev, test, prod.&lt;/p&gt;&lt;h2&gt;&lt;a href="#security" class="anchor" name="security"&gt;&lt;/a&gt;Security&lt;/h2&gt;
-&lt;p&gt;Our journey to fully move into next generation Spring Security OAuth2 support is almost complete and we expect to finalize it in next releases. There is a blog post &lt;a href="https://spring.io/blog/2018/01/30/next-generation-oauth-2-0-support-with-spring-security"&gt;Next Generation OAuth 2.0 Support with Spring Security&lt;/a&gt; which outlined where things are going in a Spring world.&lt;/p&gt;&lt;h2&gt;&lt;a href="#developer-surveys" class="anchor" name="developer-surveys"&gt;&lt;/a&gt;Developer Surveys&lt;/h2&gt;
-&lt;p&gt;We have released one major release (2.0), three minor releases (2.1, 2.2, and 2.3), and several maintenance releases in 2019! Likewise, Spring Cloud Stream, Spring Cloud Task, Deployers, Skipper, Apps, and remaining others in the SCDF ecosystem independently evolved in isolation, as well.&lt;/p&gt;
-&lt;p&gt;Thank you, everyone, for your support, contributions, and participation!&lt;/p&gt;
-&lt;p&gt;As we are inching towards the New Year¡¯s, we wanted to reach out to the community to learn about your interests and feedback. Please take these super quick 1-page surveys and let us know.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://forms.gle/VWjQai7DzBTFNVof6"&gt;Spring Cloud Data Flow&lt;/a&gt;&lt;br/&gt;&lt;a href="https://forms.gle/z9ja25wQrDZSmeQb7"&gt;Spring Cloud Stream&lt;/a&gt;&lt;br/&gt;&lt;a href="https://forms.gle/upYHVn3wVJnHKbyB8"&gt;Spring Cloud Task&lt;/a&gt;&lt;/p&gt;&lt;h2&gt;&lt;a href="#stay-in-touch-hellip" class="anchor" name="stay-in-touch-hellip"&gt;&lt;/a&gt;Stay in touch&amp;hellip;&lt;/h2&gt;
-&lt;p&gt;As always, we welcome feedback and contributions, so please reach out to us on &lt;a href="https://stackoverflow.com/questions/tagged/spring-cloud-dataflow"&gt;Stackoverflow&lt;/a&gt; or &lt;a href="https://github.com/spring-cloud/spring-cloud-dataflow/issues"&gt;GitHub&lt;/a&gt; or via &lt;a href="https://gitter.im/spring-cloud/spring-cloud-dataflow"&gt;Gitter&lt;/a&gt;.&lt;/p&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>
