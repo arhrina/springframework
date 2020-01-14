@@ -43,6 +43,6 @@ $(function(){
 			</c:forEach>
 		</c:otherwise>
 	</c:choose>
-	<button class="btn-insert">독서록 추가</button>
+	<button type="button" fclass="btn-insert">독서록 추가</button>
 </body>
 </html>

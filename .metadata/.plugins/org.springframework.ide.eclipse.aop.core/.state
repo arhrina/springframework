@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
-<aop-project name="SpMVC_04_Iolist_04"/>
-<aop-project name="SpMVC_90_ReadBookV1"/>
-<aop-project name="SpMVC_13_ImgGalleryV4"/>
-<aop-project name="SpMVC_05_Memo_02"/>
+<aop-project name="SpMVC_14_ReadBookV2"/>
 </aop-reference-model>
