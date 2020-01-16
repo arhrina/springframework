@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+ <mapper namespace="com.biz.rbooks.repository.ReadBookDao"> <!-- 해당하는 class랑 연결해서 메서드 이름이랑 mapper id랑 같은 것 동작 -->
+ 
+ 	<select id="selectAll" resultType="rBookVO">
+ 		SELECT
+			RB_SEQ,
+			RB_BCODE,
+			B_NAME AS RB_BNAME,
+			RB_DATE,
+			RB_STIME,
+			RB_RTIME,
+			RB_SUBJECT,
+			RB_TEXT,
+			RB_STAR
+		FROM tbl_read_book R, tbl_books B WHERE R.rb_bcode = b.b_code
+ 	</select>
+ 	
+ 	<select id="findBySeq" resultType="rBookVO">
+ 		SELECT
+			RB_SEQ,
+			RB_BCODE,
+			B_NAME AS RB_BNAME,
+			RB_DATE,
+			RB_STIME,
+			RB_RTIME,
+			RB_SUBJECT,
+			RB_TEXT,
+			RB_STAR
+		FROM tbl_read_book R, tbl_books B WHERE R.rb_bcode = b.b_code AND r.rb_seq = #{rbSeq}
+ 	</select>
+
+ 	<insert id="insert" parameterType="rBookVO">
+	 	INSERT INTO tbl_read_book(
+	 		rb_seq,
+			rb_bcode,
+			rb_date,
+			rb_stime,
+			rb_rtime,
+			rb_subject,
+			rb_text,
+			rb_star
+			)
+			
+		VALUES(
+			SEQ_READ_BOOK.NEXTVAL,
+			#{rb_bcode, jdbcType=VARCHAR},
+			#{rb_date, jdbcType=VARCHAR},
+			#{rb_stime, jdbcType=VARCHAR},
+			#{rb_rtime, jdbcType=VARCHAR},
+			#{rb_subject, jdbcType=VARCHAR},
+			#{rb_text, jdbcType=VARCHAR},
+			#{rb_star, jdbcType=VARCHAR}			
+			)
+ 	</insert>
+ 	<update id="update"></update>
+ </mapper> 

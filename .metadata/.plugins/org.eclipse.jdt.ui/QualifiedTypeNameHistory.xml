@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.util.Collections"/>
-<fullyQualifiedTypeName name="org.springframework.http.MediaType"/>
-<fullyQualifiedTypeName name="org.springframework.http.HttpEntity"/>
-<fullyQualifiedTypeName name="java.lang.ClassCastException"/>
-<fullyQualifiedTypeName name="com.google.gson.JsonObject"/>
 <fullyQualifiedTypeName name="javax.xml.bind.annotation.XmlRootElement"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMethod"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.SessionAttributes"/>
@@ -26,7 +21,6 @@
 <fullyQualifiedTypeName name="com.biz.todo.common.ToDoAnn"/>
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="java.nio.file.Files"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
 <fullyQualifiedTypeName name="java.lang.Long"/>
@@ -37,21 +31,15 @@
 <fullyQualifiedTypeName name="org.springframework.web.servlet.handler.HandlerInterceptorAdapter"/>
 <fullyQualifiedTypeName name="org.apache.ibatis.annotations.InsertProvider"/>
 <fullyQualifiedTypeName name="org.apache.ibatis.annotations.UpdateProvider"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
-<fullyQualifiedTypeName name="org.apache.ibatis.annotations.Param"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
 <fullyQualifiedTypeName name="org.apache.ibatis.annotations.Insert"/>
 <fullyQualifiedTypeName name="org.apache.ibatis.annotations.Delete"/>
 <fullyQualifiedTypeName name="lombok.extern.slf4j.Slf4j"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ModelAttribute"/>
 <fullyQualifiedTypeName name="org.jasypt.encryption.pbe.StandardPBEStringEncryptor"/>
-<fullyQualifiedTypeName name="org.apache.ibatis.annotations.Select"/>
-<fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
 <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
 <fullyQualifiedTypeName name="ch.qos.logback.core.model.Model"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
-<fullyQualifiedTypeName name="lombok.RequiredArgsConstructor"/>
 <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
 <fullyQualifiedTypeName name="lombok.Getter"/>
 <fullyQualifiedTypeName name="lombok.Setter"/>
@@ -59,5 +47,17 @@
 <fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
 <fullyQualifiedTypeName name="lombok.ToString"/>
 <fullyQualifiedTypeName name="lombok.Builder"/>
+<fullyQualifiedTypeName name="java.time.LocalDate"/>
+<fullyQualifiedTypeName name="java.time.LocalTime"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="org.apache.ibatis.annotations.Param"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+<fullyQualifiedTypeName name="lombok.RequiredArgsConstructor"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="org.apache.ibatis.annotations.Select"/>
+<fullyQualifiedTypeName name="org.springframework.format.datetime.DateFormatter"/>
+<fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
 </qualifiedTypeNameHistroy>
