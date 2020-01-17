@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/* .biz-를 넣은 이유는 blue, orange, red같은 이름이 이미 존재할 수 있으므로 예약자를 피하기 위해 */
+.biz-blue {
+	color: #fff;
+	background-color: #3E65FF;
+}
+
+.biz-orange {
+	color: #fff;
+	background-color: #fa6800;
+}
+
+.biz-red {
+	color: #fff;
+	background-color: red;
+}

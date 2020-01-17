@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+ <mapper namespace="com.biz.rbooks.repository.BookDao">
+
+	<select id="findByBNames" resultType="bookVO">
+		SELECT * FROM tbl_books
+		<if test="#{name != null}">
+		<!-- name 변수를 bVO로 다루면서 WHERE로 시작하고 계속 OR를 반복생성하는 동적쿼리. 끝날때 ) 등의 기호를 넣으려면 close=")" 사용.  -->
+		<!-- name을 띄어쓰기단위로 쪼갰으므로 띄어쓰기가 있는 단어마다 OR이 생성된다. 예를 들어 "모든 게"로 검색하면
+		WHERE b_name LIKE '%' || 모든 || '%' OR b_name LIKE '%' || 게 || '%' -->
+		<!-- <WHERE> </WHERE>를 사용하고 open="WHERE"를 쓰지 않아도 된다 -->
+			<foreach collection="name" open="WHERE" item="bVO" separator="OR">
+				b_name LIKE '%' || #{bVO} || '%' <!-- list로 검색하기 위한 방법. 다중문자열 검색. like 검색. 동적쿼리생성 -->
+			</foreach>
+		</if>
+	</select>
+
+ 	<insert id="insert" parameterType="bookVO">
+	 	INSERT INTO tbl_books(
+	 		b_code,
+			b_name,
+			b_auther,
+			b_comp,
+			b_year,
+			b_iprice
+			)
+			
+		VALUES(
+			#{b_code, jdbcType=VARCHAR},
+			#{b_name, jdbcType=VARCHAR},
+			#{b_auther, jdbcType=VARCHAR},
+			#{b_comp, jdbcType=VARCHAR},
+			#{b_year, jdbcType=VARCHAR},
+			#{b_iprice, jdbcType=VARCHAR}
+			)
+ 	</insert>
+ 	<update id="update"></update>
+ </mapper> 
