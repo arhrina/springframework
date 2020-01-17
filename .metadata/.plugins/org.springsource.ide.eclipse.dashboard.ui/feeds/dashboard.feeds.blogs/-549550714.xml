@@ -5,7 +5,20 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2020-01-16T21:20:00Z</updated>
+  <updated>2020-01-17T03:21:33Z</updated>
+  <entry>
+    <title>A Bootiful Podcast: Spring Cloud Services' Bella (Yuxin) Bai</title>
+    <link rel="alternate" href="https://spring.io/blog/2020/01/17/a-bootiful-podcast-spring-cloud-services-bella-yuxin-bai" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2020-01-17:3934</id>
+    <updated>2020-01-17T03:21:33Z</updated>
+    <content type="html">&lt;p&gt;Hi, Spring fans! In this week&amp;rsquo;s installment Josh Long (@starbuxman) talks to Spring Cloud Services teammate Bella (Yuxin) Bai.&lt;/p&gt;
+&lt;iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/744740773&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"&gt;&lt;/iframe&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>Spring Boot 2.2.3 released</title>
     <link rel="alternate" href="https://spring.io/blog/2020/01/16/spring-boot-2-2-3-released" />
@@ -1012,36 +1025,6 @@ compile &amp;#39;org.springframework.cloud:spring-cloud-starter-netflix-eureka-c
   &lt;li&gt;&lt;a href="http://www.ProjectReactor.io"&gt;Project Reactor&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/731355979&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"&gt;&lt;/iframe&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Tools 4.5.0 released</title>
-    <link rel="alternate" href="https://spring.io/blog/2019/12/19/spring-tools-4-5-0-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Martin Lippert</name>
-    </author>
-    <id>tag:spring.io,2019-12-19:3913</id>
-    <updated>2019-12-19T09:24:42Z</updated>
-    <content type="html">&lt;p&gt;Dear Spring Community,&lt;/p&gt;
-&lt;p&gt;I am happy to announce the 4.5.0 release of the Spring Tools 4 for Eclipse, Visual Studio Code, and Theia.&lt;/p&gt;
-&lt;p&gt;Highlights from this release include:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;(Eclipse)&lt;/em&gt;: Spring Tools 4 for Eclipse distribution updated to Eclipse 2019-12 release&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;(Eclipse)&lt;/em&gt; improvement: progress updates from new live hover mechanism now appears in Eclipse as well&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;(Eclipse)&lt;/em&gt; bugfix: fixed NPE when deleting apps from CF via the boot dashboard&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;(Eclipse)&lt;/em&gt; bugfix: finish button was disabled after selecting an org/space when creating a CF target in the boot dashboard&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;(Spring Boot)&lt;/em&gt; improvement: better and more consistent labels for running processes in live hover actions across the board&lt;/li&gt;
-  &lt;li&gt;various improvements to the Spring Tools 4 user guide&lt;/li&gt;
-  &lt;li&gt;bugfixes&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;To download the distribution for Eclipse and find links to the marketplace entries for Visual Studio Code and Theia, please go visit:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Spring Tools 4: &lt;a href="https://spring.io/tools/"&gt;https://spring.io/tools/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Detailed changes can be found here: &lt;a href="https://github.com/spring-projects/sts4/wiki/Changelog#2019-12-19-450-release"&gt;https://github.com/spring-projects/sts4/wiki/Changelog#2019-12-19-450-release&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;Spring Tools 4.5.1 is scheduled to be released in late January 2020.&lt;/p&gt;
-&lt;p&gt;Enjoy!&lt;/p&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>
