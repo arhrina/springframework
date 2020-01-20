@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context-4.3.xsd">
+		
+	<bean id="envConfig" class="org.jasypt.encryption.pbe.config.EnvironmentPBEConfig">
+		<property name="algorithm" value="PBEWithMD5AndDES"/>
+		<property name="passwordEnvName" value="NAVER"></property>
+	</bean>
+	
+	<bean id="configEnc" class="org.jasypt.encryption.pbe.StandardPBEStringEncryptor">
+		<property name="config" ref="envConfig"/> <!-- envConfig 값을 참조하여 config를 채운다 -->
+	</bean>
+	
+	<bean class="org.jasypt.spring31.properties.EncryptablePropertyPlaceholderConfigurer">
+		<constructor-arg ref="configEnc"/>
+		<property name="location" value="/WEB-INF/spring/naver.email.secret.properties"/>
+	</bean>
+		
+		
+<!-- mail을 보내기 위한 기본 설정수행 -->
+<!-- 메일을 보내는 서버, 받는 서버가 있다. 이들은 전송만 하는 시스템. tcp/ip에서 messaging 중계서버.
+mail을 작성할 수 있는 application이 필요. 서버에 저장하면 메일서버는 주소를 찾아서 받는 서버에 임시저장한다.
+메일 수신용 application을 가지고 수신자가 접속했을 때 임시저장된 메일을 가져간다. 최근은 별도의 application은 쓰지 않고 웹을 쓴다.
+
+메일을 저장할 수 있는 server는 만들 수 없으므로 공개용 서버를 사용한다. send mail, q mail 등 무료로 사용할 수 있는 서버
+send mail : linux 기본설치 서버
+q mail : 보안을 좀 더 높여서 설치해 쓰는 서버
+
+relay server로 네이버를 통해 실습. 암호화시킨 id랑 비밀번호 정보를 가지고(로그인이 되어야 송신가능) 제3자에게 메일을 보냄.
+네이버 정보 등록할 bean 파일 -->
+
+	<bean class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="smtp.naver.com"/>
+		<property name="port" value="465"/> <!-- 네이버 메일설정 → POP3/SMTP 페이지에 SMTP -->
+		<property name="username" value="${naver.username}"/> <!-- 위에 있는 bean을 이용해서 호출해서 ENC를 통해 평문으로 바꿔서 사용 -->
+		<property name="password" value="${naver.password}"/> <!-- 위에 있는 bean을 이용해서 호출해서 ENC를 통해 평문으로 바꿔서 사용 -->
+		
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.transport.protocol">smtp</prop> <!-- 메일을 보낼 때 쓸 프로토콜 -->
+				<prop key="mail.smtp.auth">true</prop> <!-- 인증(로그인) 시도 여부 -->
+				<prop key="mail.smtp.starttls.enable">true</prop>
+				<prop key="mail.smtp.ssl.enable">true</prop> <!-- ssl 암호화 사용 여부 -->
+				<prop key="mail.smtp.ssl.trust">smtp.naver.com</prop> <!-- 누구를 통해 암호화를 할 것 -->
+				<prop key="mail.debug">true</prop> <!-- 메일을 수신할 때 디버깅메시지를 수신할 것인가 -->
+			</props>
+		</property>
+	</bean>
+
+</beans>

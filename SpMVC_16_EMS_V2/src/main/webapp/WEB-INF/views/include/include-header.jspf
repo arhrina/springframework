@@ -1,0 +1,39 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>나의 홈페이지</title>
+<script>
+	$(".a-menu").click(function(){ // a-menu class를 클릭하면
+		let href = $(this).attr("data-menu") // data-menu값을 href 변수에 담고
+		document.location.href = "${rootPath}/" + href // rootPath URL 뒤에 data-menu 값이 담긴 href를 연결해서 링크로 가라
+	})
+</script>
+</head>
+<header>
+	<h1><a href="${rootPath}/" class="logo">LOGO</a></h1>
+</header>	
+<nav>
+	<ul class="main-menu">
+	<!-- a 태그는 가지되 링크는 js의 void(비어있는 값)으로 동작. 즉, a tag의 더미 -->
+		<li><a href="javascript:void(0)"
+				class="a-menu" 
+				data-menu="list">EMS</a></li>
+		<li><a href="javascript:void(0)" 
+				class="a-menu"
+				data-menu="bbs/free">자유게시판</a></li>
+		<li><a href="javascript:void(0)" 
+				class="a-menu"
+				data-menu="bbs/notice">공지사항</a></li>
+		<li><a href="javascript:void(0)" 
+				class="a-menu"
+				data-menu="member/login">로그인</a></li>
+		<li><a href="javascript:void(0)" 
+				class="a-menu"
+				data-menu="member/join">회원가입</a></li>
+	</ul>
+</nav>

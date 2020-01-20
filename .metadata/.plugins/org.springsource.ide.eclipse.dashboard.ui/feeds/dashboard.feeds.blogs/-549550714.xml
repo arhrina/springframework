@@ -5,7 +5,33 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2020-01-17T03:21:33Z</updated>
+  <updated>2020-01-17T08:42:00Z</updated>
+  <entry>
+    <title>Spring Vault 2.2.1.RELEASE and 2.1.5.RELEASE available</title>
+    <link rel="alternate" href="https://spring.io/blog/2020/01/17/spring-vault-2-2-1-release-and-2-1-5-release-available" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Mark Paluch</name>
+    </author>
+    <id>tag:spring.io,2020-01-16:3930</id>
+    <updated>2020-01-17T08:42:00Z</updated>
+    <content type="html">&lt;div class="paragraph"&gt;
+&lt;p&gt;On behalf of the community, I&amp;#8217;d like to announce the availability of Spring Vault releases &lt;code&gt;2.2.1.RELEASE&lt;/code&gt; and &lt;code&gt;2.1.5.RELEASE&lt;/code&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;Both releases ship with mostly bugfixes and dependency upgrades. Spring Vault &lt;code&gt;2.2.1.RELEASE&lt;/code&gt; ships also support to disable authentication and session management so it can be used with Vault Agent&amp;#8217;s cached authentication.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;For a complete list of changes, see the &lt;a href="http://docs.spring.io/spring-vault/docs/2.2.1.RELEASE/changelog.txt"&gt;2.2.1.RELEASE changelog&lt;/a&gt; respective &lt;a href="http://docs.spring.io/spring-vault/docs/2.1.5.RELEASE/changelog.txt"&gt;2.1.5.RELEASE changelog&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;With this release, we&amp;#8217;d also like to announce that Spring Vault 2.1.x is going to end of life in November 2020. We encourage all users to upgrade to the latest release of the 2.2.x line. You can find more details about the supported versions on our &lt;a href="https://github.com/spring-projects/spring-vault/wiki/Spring-Vault-Versions"&gt;versions overview&lt;/a&gt; in the GitHub repository.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class="paragraph"&gt;
+&lt;p&gt;&lt;a href="http://projects.spring.io/spring-vault/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-vault"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-vault/issues"&gt;Issues&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-vault/docs/2.2.1.RELEASE/reference/html/"&gt;Documentation for 2.2.1.RELEASE&lt;/a&gt; | &lt;a href="http://docs.spring.io/spring-vault/docs/2.1.5.RELEASE/reference/html/"&gt;Documentation for 2.1.5.RELEASE&lt;/a&gt; | &lt;a href="http://stackoverflow.com/questions/tagged/spring-vault"&gt;Stack Overflow&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>A Bootiful Podcast: Spring Cloud Services' Bella (Yuxin) Bai</title>
     <link rel="alternate" href="https://spring.io/blog/2020/01/17/a-bootiful-podcast-spring-cloud-services-bella-yuxin-bai" />
@@ -1007,24 +1033,6 @@ compile &amp;#39;org.springframework.cloud:spring-cloud-starter-netflix-eureka-c
 ...&#xD;
 }
 &lt;/code&gt;&lt;/pre&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>A Bootiful Podcast: Reactor teammate Simon Basl?</title>
-    <link rel="alternate" href="https://spring.io/blog/2019/12/20/a-bootiful-podcast-reactor-teammate-simon-basl" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2019-12-20:3914</id>
-    <updated>2019-12-20T11:43:41Z</updated>
-    <content type="html">&lt;p&gt;Hi, Spring fans! In this episode, I talk to Reactor teammate &lt;a href="http://twitter.com/SimonBasle"&gt;Simon Basl?&lt;/a&gt; about Nantes, France; DevFest Nantes; &lt;a href="http://Twitter.com/ProjectReactor"&gt;Project Reactor&lt;/a&gt; operators, and so much more.&lt;/p&gt;
-&lt;p&gt;Happy holidays from your friends on the Spring team to all of you!&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="http://twitter.com/SimonBasle"&gt;Simon Basl?&lt;/a&gt; on Twitter&lt;/li&gt;
-  &lt;li&gt;&lt;a href="http://www.ProjectReactor.io"&gt;Project Reactor&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/731355979&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"&gt;&lt;/iframe&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>
