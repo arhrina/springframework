@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/tx https://www.springframework.org/schema/tx/spring-tx-4.3.xsd">	
+
+	<!-- mySQL은 포트번호를 적을 필요는 없지만 고정하려면 적어준다 -->
+	<!-- 5버전 이전에서는 url 뒤에 useSSL=false를 추가해줘야한다 -->
+	<!-- mySQL jdbc 설정. oracle jdbc 설정이랑 유사 -->
+	<bean id="emsHiber" class="org.apache.commons.dbcp2.BasicDataSource">
+		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+		<property name="url" value="jdbc:mysql://127.0.0.1:3306/emsDB?serverTimezone=Asia/Seoul"/>
+		<property name="username" value="${MySQL.username}"/>
+		<property name="password" value="${MySQL.password}"/>
+	</bean>
+	
+	<!-- entity(논리적) : table(물리적) -->
+	<!-- prop은 java의 Map 구조. key와 value를 가짐. 자동완성이 안되므로 주의 -->
+	<!-- JPA: Java Persistence API. 자바에서 퍼시스턴스(VO)랑 완전데이터영역(DBMS)을 연결해주는 api
+	vo에 set해주면 jpa가 알아서 처리해서 dbms에 반영되게 해준다. 하이버네이트랑 연결되어 사용된다
+	JPA는 인터페이스 개념이고 내부의 내용 구현은 하이버네이트가 수행한다 -->
+	<!-- jpa와 hibernate 설정 -->
+	<!-- dialect : 각 DB에 맞는 SQL로 변경해주는 클래스 -->
+	<!-- hbm2ddl:hibernate가 보내는 명령어를 무엇으로 쓸 것인가? -->
+	<!-- id 생성에 자동완성기능을 쓰겠는가 -->
+	<bean class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="dataSource" ref="emsHiber"/>
+		<property name="packagesToScan" value="com.biz.ems.domain"/>
+		<property name="jpaVendorAdapter">
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter"/>
+		</property>
+		<property name="jpaProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.format_sql">true</prop>
+				<prop key="hibernate.use_sql_comments">true</prop>
+				<prop key="hibernate.implicit_naming_strategy">org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<prop key="use_new_id_generator_mappings">true</prop>
+			</props>
+		</property>
+	</bean>
+
+</beans>
