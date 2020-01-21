@@ -1,6 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<script>
+	$(function() {
+		$(".email-list").click(function(){
+			document.location.href = "${rootPath}/ems/view/" + $(this).data("seq")
+		})
+	})
+</script>
 <table class="main-list">
 	<tr>
 		<th>NO</th>
@@ -17,14 +24,14 @@
 			</tr>
 		</c:when>
 		<c:otherwise>
-			<c:forEach items="${LIST}" var="VO" varStatus="in">
-				<tr>
-					<td>NO</td>
-					<td>받는Email</td>
-					<td>받는사람</td>
-					<td>제목</td>
-					<td>작성일자</td>
-					<td>작성시각</td>
+			<c:forEach items="${LIST}" var="vo" varStatus="in">
+				<tr data-seq="${vo.emsSeq}" class="email-list">
+					<td>${in.index}</td>
+					<td>${vo.fromEmail}</td>
+					<td>${vo.fromName}</td>
+					<td>${vo.subject}</td>
+					<td>${vo.sendDate}</td>
+					<td>${vo.sendTime}</td>
 				</tr>
 			</c:forEach>
 		</c:otherwise>

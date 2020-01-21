@@ -74,17 +74,17 @@ public class EmailVO { // hibernate로 테이블을 sts VO에서 만들었다. O
 	@GeneratedValue(strategy = GenerationType.AUTO) // 자동 increment. 오라클에서는 문제가 된다
 	@Column(name="ems_seq")
 	private long emsSeq; // long = MySQL BIG INT. oracle은 number
-	// table의 칼럼명은 ems_seq로 지정하고 vo클래스의 필드변수는 emsSeq로
+	// table의 칼럼명은 ems_seq로 지정하고 vo클래스의 필드변수는 emsSeq로. Camel Case로 바꾼 이유는 Dao에서 snake case를 인식하지 못하기 때문
 	
-	@Column(nullable=false, length = 20) // 칼럼 빈값 불가(NOT NULL), 길이 20(영어, 숫자). VARCHAR(특정 DB는 char)
-	private String from_email; // 칼럼 이름으로 자동 생성
+	@Column(name="from_email", nullable=false, length = 20) // 칼럼 빈값 불가(NOT NULL), 길이 20(영어, 숫자). VARCHAR(특정 DB는 char)
+	private String fromEmail; // 칼럼 이름으로 자동 생성
 	
 	@Column(name="to_email", nullable=false) // name을 별도로 설정해주면 칼럼이름으로 들어간다. 크기지정을 안해주면 기본값은 255
 	private String to_email; // 자동메서드는 camel을 쓰므로 snake는 피해야한다. name을 쓰는 이유
 	// hibernate 4까지는 camel을 snake로 자동으로 바꿔줬었는데 지금은 별도로 라이브러리로 사용
 	
 	@Column(name="from_name", nullable=true, columnDefinition = "nVARCHAR(20)") // 한글이 들어가는 칼럼은 nVARCHAR로 따로 명시 필수
-	private String from_name;
+	private String fromName;
 	
 	@Column(nullable=true, columnDefinition = "nVARCHAR(20)")
 	private String to_name;
@@ -95,9 +95,9 @@ public class EmailVO { // hibernate로 테이블을 sts VO에서 만들었다. O
 	@Column(nullable=true, columnDefinition = "nVARCHAR(1000)")
 	private String content;
 	
-	@Column(nullable=true)
-	private String send_date;
+	@Column(name="send_date", nullable=true)
+	private String sendDate;
 	
-	@Column(nullable=true)
-	private String send_time;
+	@Column(name="send_time", nullable=true)
+	private String sendTime;
 }

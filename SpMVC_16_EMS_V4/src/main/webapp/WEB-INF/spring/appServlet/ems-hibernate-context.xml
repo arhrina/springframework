@@ -3,8 +3,10 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd
 		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/data/jpa https://www.springframework.org/schema/data/jpa/spring-jpa-1.8.xsd
 		http://www.springframework.org/schema/tx https://www.springframework.org/schema/tx/spring-tx-4.3.xsd">	
 
 	<!-- mySQL은 포트번호를 적을 필요는 없지만 고정하려면 적어준다 -->
@@ -17,6 +19,12 @@
 		<property name="password" value="${MySQL.password}"/>
 	</bean>
 	
+	<context:annotation-config/>
+	<tx:annotation-driven/>
+	
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="dataSource" ref="emsHiber"></property>
+	</bean>
 	<!-- entity(논리적) : table(물리적) -->
 	<!-- prop은 java의 Map 구조. key와 value를 가짐. 자동완성이 안되므로 주의 -->
 	<!-- JPA: Java Persistence API. 자바에서 퍼시스턴스(VO)랑 완전데이터영역(DBMS)을 연결해주는 api
@@ -26,7 +34,7 @@
 	<!-- dialect : 각 DB에 맞는 SQL로 변경해주는 클래스 -->
 	<!-- hbm2ddl:hibernate가 보내는 명령어를 무엇으로 쓸 것인가? -->
 	<!-- id 생성에 자동완성기능을 쓰겠는가 -->
-	<bean class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
 		<property name="dataSource" ref="emsHiber"/>
 		<property name="packagesToScan" value="com.biz.ems.domain"/>
 		<property name="jpaVendorAdapter">
@@ -44,5 +52,6 @@
 			</props>
 		</property>
 	</bean>
+	<jpa:repositories base-package="com.biz.ems.repository"/>
 
 </beans>

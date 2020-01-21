@@ -123,6 +123,8 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\bizwork\spring framework\SpMVC_16_EMS_V4"/>
+			<item value="C:\bizwork\spring framework\SpMVC_16_EMS_V3"/>
 			<item value="C:\bizwork\spring framework\SpMVC_16_EMS_V2"/>
 			<item value="C:\bizwork\spring framework\SpMVC_90_ReadBookV1"/>
 			<item value="C:\bizwork\spring framework\SpMVC_13_ImgGalleryV4"/>
@@ -141,8 +143,6 @@
 			<item value="C:\BizWork\springwork\SpMVC_04_Iolist_04"/>
 			<item value="C:\BizWork\springwork\SpMVC_04_Iolist_02"/>
 			<item value="C:\BizWork\springwork\SpMVC_03_Student_03"/>
-			<item value="C:\BizWork\springwork\SpMVC_01_Student_02"/>
-			<item value="C:\BizWork\springwork\JSP_03_Servlet"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>
