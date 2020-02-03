@@ -123,8 +123,9 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
-			<item value="C:\Users\505-20\Desktop\Travel"/>
+			<item value="C:\bizwork\spring framework\SpMVC_16_EMS_V8"/>
 			<item value="C:\bizwork\spring framework\SpMVC_16_EMS_V6"/>
+			<item value="C:\Users\505-20\Desktop\Travel"/>
 			<item value="C:\bizwork\spring framework\SpMVC_16_EMS_V5"/>
 			<item value="C:\bizwork\spring framework\SpMVC_16_EMS_V4"/>
 			<item value="C:\bizwork\spring framework\SpMVC_16_EMS_V3"/>
@@ -142,7 +143,6 @@
 			<item value="C:\BizWork\springwork\SpMVC_10_DataGokrBok"/>
 			<item value="C:\BizWork\springwork\SpMVC_07_DataGoKr_02"/>
 			<item value="C:\BizWork\springwork\SpMVC_05_Memo_10_Join_03"/>
-			<item value="C:\Users\505-26\Desktop\team prj"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>

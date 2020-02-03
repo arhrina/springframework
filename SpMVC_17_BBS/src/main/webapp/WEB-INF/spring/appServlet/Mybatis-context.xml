@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/tx https://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+
+	<!-- DataSource -->
+	<bean id="MysqlMybatisDS" class="org.apache.commons.dbcp2.BasicDataSource">
+		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://127.0.0.1:3306/emsDB?serverTimezone=Asia/Seoul" />
+		<property name="username" value="${mysql.user}" />
+		<property name="password" value="${mysql.password}" />
+	</bean>
+
+	<!-- SqlSessionFactory Bean -->
+	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+		<property name="dataSource" ref="MysqlMybatisDS" />
+		
+		<property name="typeAliasesPackage" value="com.biz.bbs.domain" />
+		<property name="mapperLocations" value="/WEB-INF/spring/mapper/*-mapper.xml" />
+		<!-- 폴더만 있어도 오류는 나지 않는다. xml방식 mapper 사용을 위한 코드 -->
+		
+		<property name="configuration">
+			<bean class="org.apache.ibatis.session.Configuration"> <!-- config.xml을 쓰지 않고 bean으로 context에 설정 -->
+				<property name="cacheEnabled" value="true" /> <!-- CRUD 수행시 cpu의 캐시를 씀 -->
+				<property name="defaultExecutorType" value="REUSE" /> <!-- CRUD 만들면 그걸 재사용 -->
+				<property name="jdbcTypeForNull" value="VARCHAR" />
+				<!-- null시 에러를 막기 위해 jdbcType=VARCHAR를 일일이 붙여주던걸 기본으로 해줌 -->
+				
+				<property name="mapUnderscoreToCamelCase" value="false"/> <!-- VO 카멜케이스를 snake로. false면 VO 그대로 갖다씀 -->
+				<property name="logPrefix" value="마이바티스 : "/> <!-- logback 사용시 문자열 자동으로 붙여주기 -->
+			</bean>
+		</property>
+	</bean>
+		
+	<tx:annotation-driven/>
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="MysqlMybatisDS"/>
+	</bean>
+
+	<mybatis-spring:scan base-package="com.biz.bbs.mapper"/> <!-- annotation 방식을 쓰기 위한 코드 -->
+
+</beans>
