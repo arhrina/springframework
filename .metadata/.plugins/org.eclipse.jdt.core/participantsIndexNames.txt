@@ -83,10 +83,10 @@ C:\bizwork\spring framework\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearc
 \SpMVC_05_Memo_03_Login\src\main\java
 C:\bizwork\spring framework\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2164838918.index
 \SpMVC_13_ImgGallery2\src\main\java
-C:\bizwork\spring framework\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2430753083.index
-\SpMVC_17_BBSV2\src\main\java
 C:\bizwork\spring framework\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\967200413.index
 \SpMVC10_DataGoKrBok\src\main\java
+C:\bizwork\spring framework\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2430753083.index
+\SpMVC_17_BBSV2\src\main\java
 C:\bizwork\spring framework\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3142882860.index
 \SpMVC_05_Memo\src\main\java
 C:\bizwork\spring framework\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3532242472.index
@@ -223,6 +223,8 @@ C:\bizwork\spring framework\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearc
 \SpMVC_03_Student_04\src\main\java
 C:\bizwork\spring framework\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3531342194.index
 \SpMVC_13_ImgGalleryV3\src\main\java
+C:\bizwork\spring framework\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3752912053.index
+\SpMvc_18_Crawl\src\main\java
 C:\bizwork\spring framework\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3957019656.index
 \SpMVC_14_ReadBookV3\src\main\java
 C:\bizwork\spring framework\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1041622507.index
