@@ -5,7 +5,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/task https://www.springframework.org/schema/task/spring-task-4.3.xsd">
 
-	<!-- @Schedule을 사용하려면 원래는 여러 bean들을 설정해야한다 -->
+	<!-- @Schedule을 사용하려면 task bean namespace를 켜줘서 task:annotation-driven을 해줘야된다. servlet에 task를 켜고
+	걸어줘도 된다 -->
 	<task:annotation-driven/>
-	
 </beans>

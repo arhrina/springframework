@@ -39,13 +39,25 @@ public class MovieCrawlService {
 		return nDao.selectAll();
 	}
 	
+	/*
+	 * fixedRate : 바로 이전 스케쥴링이 시작된 이후에 다시 시작할 시간. 메서드 실행시간이 5초인데 스케쥴이 2초마다 돌린다면
+	 * 실행이 완료되지 않은 상태에서 스케쥴링이 계속 중첩되어 실행될 수 있으므로 주의
+	 * fixedDelay : 바로 이전 스케쥴링이 종료된 이후 다시 시작
+	 * 
+	 * cron : Unix 시스템에서는 일정한 시간(년, 월, 요일, 일, 시, 분, 초)을 지정해서
+	 * 어떤 일을 정기적으로 수행할 때 cron tab이라는 기능을 이용해서 작업을 지정할 수 있다
+	 * 
+	 * cron="초, 분, 시, 일, 요일, 월, (생략가능 년)"로 지정
+	 * cron="0 30 1 * * *"은 매일 1시 30분에 동작하게 만든다
+	 */
 	@Scheduled(fixedDelay = 100000) // 서버가 시작한 뒤 100초마다(100000ms) 실행. 
 	public void naverMovieGet() {
 		List<NaverMovieVO> naverList = this.movieRankGet(); // 크롤링해오고
 		nDao.deleteAll(); // DB에 있는 데이터 다 지우고
-		for(NaverMovieVO vo : naverList) {
-			nDao.insert(vo); // 크롤링해온 데이터를 DB에 insert하기
-		}
+		nDao.insertAll(naverList);
+//		for(NaverMovieVO vo : naverList) {
+//			nDao.insert(vo); // 크롤링해온 데이터를 DB에 insert하기
+//		}
 	}
 	
 	

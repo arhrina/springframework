@@ -13,6 +13,7 @@ public interface NaverDao {
 	public List<NaverMovieVO> selectAll();
 	
 	public int insert(NaverMovieVO mVO);
+	public int insertAll(List<NaverMovieVO> mList); // 변수 이름은 상관없고, 리스트를 넘겨준다
 	
 	@Delete("DELETE FROM tbl_movie")
 	public void deleteAll(); // 전체 지우기
