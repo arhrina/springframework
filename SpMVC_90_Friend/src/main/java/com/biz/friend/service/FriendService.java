@@ -18,4 +18,31 @@ public class FriendService {
 	public List<FriendVO> selectAllList() {
 		return fDao.selectAll();
 	}
+	
+	public FriendVO findById(long f_id){
+		return fDao.findById(f_id);
+	}
+	
+	public List<FriendVO> findByName(String name){
+		return fDao.findByName(name);
+	}
+	
+	public List<FriendVO> findByTel(String tel){
+		return fDao.findByPhoneNumber(tel);
+	}
+	
+	public int insert(FriendVO fVO) {
+		return fDao.insert(fVO);
+	}
+
+	public int delete(long f_id) {
+		// TODO Auto-generated method stub
+		return fDao.delete(f_id);
+	}
+
+	public int update(FriendVO fVO) {
+		// TODO Auto-generated method stub
+		return fDao.update(fVO);
+	}
+	
 }
