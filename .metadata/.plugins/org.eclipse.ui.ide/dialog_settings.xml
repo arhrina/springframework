@@ -123,6 +123,10 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\bizwork\spring_framework\SpMVC_19_MyShopV3"/>
+			<item value="C:\bizwork\spring\SpMVC_19_MyShopV2"/>
+			<item value="C:\bizwork\spring framework\SpMVC_19_MyShop"/>
+			<item value="C:\bizwork\spring framework\SpMVC_19_MyShopV2"/>
 			<item value="C:\bizwork\spring framework\SpMVC_17_BBSV3"/>
 			<item value="C:\bizwork\spring framework\SpMVC_16_EMS_V8"/>
 			<item value="C:\bizwork\spring framework\SpMVC_16_EMS_V6"/>
@@ -139,10 +143,6 @@
 			<item value="C:\bizwork\spring\SpMVC_12_ToDoListV2"/>
 			<item value="C:\bizwork\spring\SpMVC_12_ToDoList"/>
 			<item value="C:\bizwork\spring"/>
-			<item value="C:\Users\505-26\Desktop\team prj\Travel"/>
-			<item value="C:\BizWork\springwork"/>
-			<item value="C:\BizWork\springwork\SpMVC_10_DataGokrBok"/>
-			<item value="C:\BizWork\springwork\SpMVC_07_DataGoKr_02"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>
@@ -153,9 +153,19 @@
 		<item key="DIALOG_X_ORIGIN" value="710"/>
 		<item key="DIALOG_Y_ORIGIN" value="242"/>
 		<item key="DIALOG_WIDTH" value="500"/>
-		<item key="DIALOG_HEIGHT" value="419"/>
+		<item key="DIALOG_HEIGHT" value="467"/>
 		<item key="TOGGLE_SELECTED" value="false"/>
+		<item key="BUILD_NOW" value="true"/>
+		<item key="BUILD_ALL" value="true"/>
 	</section>
 	<section name="NewWizardAction">
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="652"/>
+		<item key="DIALOG_Y_ORIGIN" value="341"/>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
 	</section>
 </section>
