@@ -1,7 +1,7 @@
 eclipse.m2.defaultRuntime=apache-maven-3.6.3
-eclipse.m2.globalSettingsFile=C\:\\bizwork\\spring framework\\\uCC38\uC870\uC790\uB8CC\\settings.xml
+eclipse.m2.globalSettingsFile=C\:\\bizwork\\apache-maven-3.6.3\\conf\\settings.xml
 eclipse.m2.runtimes=apache-maven-3.6.3
 eclipse.m2.runtimesNodes/apache-maven-3.6.3/location=C\:\\bizwork\\apache-maven-3.6.3-bin\\apache-maven-3.6.3
 eclipse.m2.runtimesNodes/apache-maven-3.6.3/type=EXTERNAL
-eclipse.m2.userSettingsFile=C\:\\bizwork\\spring framework\\\uCC38\uC870\uC790\uB8CC\\settings (2).xml
+eclipse.m2.userSettingsFile=C\:\\bizwork\\apache-maven-3.6.3\\conf\\settings.xml
 eclipse.preferences.version=1

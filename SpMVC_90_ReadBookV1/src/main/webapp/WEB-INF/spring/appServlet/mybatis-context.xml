@@ -20,8 +20,7 @@
 	<!-- sqlSessionFactory -->
 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
 		<property name="dataSource" ref="oracldDS"/>
-		<property name="typeAliasesPackage" 
-					value="com.biz.rbooks.domain"/>
+		<property name="typeAliasesPackage" 					value="com.biz.rbooks.domain"/>
 	</bean>
 	
 	<mybatis-spring:scan base-package="com.biz.rbooks.repository"/>	
