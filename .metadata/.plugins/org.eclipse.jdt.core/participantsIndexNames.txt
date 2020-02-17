@@ -55,6 +55,8 @@ C:\bizwork\spring framework\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearc
 \SpMVC_03_Student_02\src\main\java
 C:\bizwork\spring framework\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3989855189.index
 \SpMVC_04_Iolist_02\src\main\java
+C:\bizwork\spring_framework\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2940648950.index
+\SpMVC_19_MyShopV6\src\main\java
 C:\bizwork\spring framework\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2988220539.index
 \SpMVC_07_DataGoKr_02\src\main\java
 C:\bizwork\spring framework\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\700638541.index
@@ -93,12 +95,12 @@ C:\bizwork\spring framework\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearc
 \SpMVC_05_Memo_03_Login\src\main\java
 C:\bizwork\spring framework\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2164838918.index
 \SpMVC_13_ImgGallery2\src\main\java
-C:\bizwork\spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3239439177.index
-\SpMVC_19_MyShopV2\src\main\java
-C:\bizwork\spring framework\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2430753083.index
-\SpMVC_17_BBSV2\src\main\java
 C:\bizwork\spring framework\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\967200413.index
 \SpMVC10_DataGoKrBok\src\main\java
+C:\bizwork\spring framework\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2430753083.index
+\SpMVC_17_BBSV2\src\main\java
+C:\bizwork\spring\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3239439177.index
+\SpMVC_19_MyShopV2\src\main\java
 C:\bizwork\spring framework\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3142882860.index
 \SpMVC_05_Memo\src\main\java
 C:\bizwork\spring framework\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3532242472.index
@@ -169,6 +171,8 @@ C:\bizwork\spring framework\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearc
 \SpMVC_16_EMS_V3\src\main\java
 C:\bizwork\spring framework\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2013786105.index
 \SpMVC_05_Memo_10_Join_02\src\main\java
+C:\bizwork\spring_framework\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4114289210.index
+\SpMVC_19_MyShopV6\src\main\java
 C:\bizwork\spring framework\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4123783171.index
 \SpMVC_11_ProductV3\src\main\java
 C:\bizwork\spring framework\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\196099138.index
