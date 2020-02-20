@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd
+		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
+	
+	<!-- Enables the Spring MVC @Controller programming model -->
+	<annotation-driven />
+
+	<!-- Handles HTTP GET requests for /resources/** by efficiently serving up static resources in the ${webappRoot}/resources directory -->
+	<resources mapping="/resources/**" location="/resources/" />
+
+	<!-- Resolves views selected for rendering by @Controllers to .jsp resources in the /WEB-INF/views directory -->
+	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<beans:property name="prefix" value="/WEB-INF/views/" />
+		<beans:property name="suffix" value=".jsp" />
+	</beans:bean>
+	
+	<context:component-scan base-package="com.biz.app.controller" />
+	<context:component-scan base-package="com.biz.app.service" />
+	<!-- 
+	기본적으로 com.biz.app으로 되어있고 모든 패키지를 다 스캔한다. 굳이 controller와 service를 붙이는 이유는
+	VO, Dao, 기타 여러 등등의 클래스들까지 모두 다 스캔한다. 규모가 큰 프로그램이 되면 사용해야할 클래스보다 많은 것들을
+	스캔하게 되므로 tomcat 서버 시작시에 시간낭비가 발생한다
+	
+	또한 @Select, @Dao, @Repository 등의 특별한 인터페이스나 클래스의 어노테이션까지 다 스캔시 발생할 수 있는 문제를
+	방지하기 위해 스캔하는 패키지를 제한한다
+	 -->
+	
+	
+	
+</beans:beans>
