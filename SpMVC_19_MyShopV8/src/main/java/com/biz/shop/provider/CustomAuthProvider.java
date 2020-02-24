@@ -13,6 +13,9 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import com.biz.shop.domain.CustomUserDetails;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 /*
  * supports() method가 true를 return하면
  * 정상로그인된 사용자 정보가 token 형태로 
@@ -27,6 +30,12 @@ public class CustomAuthProvider implements AuthenticationProvider{
 		
 		String username = (String)authentication.getPrincipal(); // username 추출
 		String password = (String)authentication.getCredentials(); // 비밀번호 추출
+		
+		if(username == null || username.isEmpty()) {
+			log.debug("LOGIN FAIL");
+			return null;
+		}
+		
 		
 		List<GrantedAuthority> roles = new ArrayList<GrantedAuthority>();
 		roles.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
