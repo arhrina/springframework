@@ -123,6 +123,7 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\bizwork\spring_framework\SpMVC_20_BBS_FinalV3"/>
 			<item value="C:\bizwork\spring_framework\SpMVC_19_MyShopV9"/>
 			<item value="C:\bizwork\spring_framework\SpMVC_19_MyShopV8"/>
 			<item value="C:\bizwork\spring_framework\SMVC_90_01"/>
@@ -142,7 +143,6 @@
 			<item value="C:\bizwork\spring framework\SpMVC_16_EMS_V3"/>
 			<item value="C:\bizwork\spring framework\SpMVC_16_EMS_V2"/>
 			<item value="C:\bizwork\spring framework\SpMVC_90_ReadBookV1"/>
-			<item value="C:\bizwork\spring framework\SpMVC_13_ImgGalleryV4"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>
@@ -159,6 +159,13 @@
 		<item key="BUILD_ALL" value="true"/>
 	</section>
 	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.emf.codegen.ecore.ui.wizardCategory"/>
+			<item value="org.eclipse.jdt.ui.java"/>
+			<item value="org.eclipse.jst.j2ee.internal"/>
+			<item value="org.eclipse.wst.jsdt.ui.java"/>
+		</list>
 	</section>
 	<section name="ChooseWorkspaceDialogSettings">
 		<item key="DIALOG_X_ORIGIN" value="652"/>

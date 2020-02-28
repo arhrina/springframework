@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+ <mapper namespace="com.biz.bbs.repository.CommentDao">
+ 
+ 	<insert id="insert" parameterType="commentVO">
+ 			INSERT INTO tbl_comment(
+			 	C_ID,C_P_ID, C_B_ID,
+				C_DATE_TIME,C_WRITER,
+				C_SUBJECT
+			) VALUES (				
+				SEQ_COM.NEXTVAL,
+				#{c_p_id,jdbcType=VARCHAR},
+				#{c_b_id,jdbcType=VARCHAR},
+				#{c_date_time,jdbcType=VARCHAR},
+				#{c_writer,jdbcType=VARCHAR},
+				#{c_subject,jdbcType=VARCHAR}
+ 			)
+ 	
+ 	</insert>
+ 	<update id="update" parameterType="commentVO">
+		 	UPDATE tbl_bbs SET
+				C_WRITER = #{c_writer},
+				C_SUBJECT = #{c_subject}
+			WHERE
+		 		C_ID = #{c_id}
+ 	</update>
+ 
+ </mapper> 
