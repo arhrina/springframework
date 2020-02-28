@@ -123,6 +123,7 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\bizwork\spring_framework\SpMVC_19_MyShopV9"/>
 			<item value="C:\bizwork\spring_framework\SpMVC_19_MyShopV8"/>
 			<item value="C:\bizwork\spring_framework\SMVC_90_01"/>
 			<item value="C:\bizwork\spring_framework\SpMVC_19_MyShopV7"/>
@@ -142,7 +143,6 @@
 			<item value="C:\bizwork\spring framework\SpMVC_16_EMS_V2"/>
 			<item value="C:\bizwork\spring framework\SpMVC_90_ReadBookV1"/>
 			<item value="C:\bizwork\spring framework\SpMVC_13_ImgGalleryV4"/>
-			<item value="C:\bizwork\spring framework\SpMVC_13_ImgGalleryV3"/>
 		</list>
 		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
 			<item value=""/>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+
+	<!-- 콘솔에 로그를 표현할 때 사용할 패턴 설정 -->
+	<appender class="ch.qos.logback.core.ConsoleAppender" name="myConsole">
+		<encoder>
+			<pattern>%-5level %logger{36} - %msg%n</pattern>
+		</encoder>
+	</appender>
+	
+	<!--
+	logback LEVEL
+	
+	ERROR
+	WARN
+	INFO
+	DEBUG
+	TRACE
+	
+	레벨을 INFO로 설정하면 INFO 미만의 메시지는 무시
+	예를 들어 log.debug는 콘솔에 보이지 않는다  
+	 -->
+	
+	<root level="INFO">
+		<appender-ref ref="myConsole"/>
+	</root>
+	
+</configuration>
