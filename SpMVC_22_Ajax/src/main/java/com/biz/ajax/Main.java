@@ -1,5 +1,5 @@
-package com.biz.ajax;
-
+﻿package com.biz.ajax;
+// 커밋을 위한 잡코드
 public class Main {
 
 public static int[][] testCase = { 
